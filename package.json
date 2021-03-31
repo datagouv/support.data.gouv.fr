@@ -1,0 +1,19 @@
+{
+  "name": "support.data.gouv.fr",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etalab/support.data.gouv.fr.git"
+  },
+  "license": "AGPLv3",
+  "bugs": {
+    "url": "https://github.com/etalab/support.data.gouv.fr/issues"
+  },
+  "homepage": "https://github.com/etalab/support.data.gouv.fr#readme",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
+}
