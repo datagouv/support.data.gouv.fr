@@ -1,7 +1,7 @@
-import { AnswerFlow, UserChoices } from "./answer-flow";
+import { SupportFlow, UserChoices } from "./support-flow";
 import { Answer, ChoiceId, Question, QuestionTitle } from "./question-tree";
 
-describe("Answer flow", () => {
+describe("Support flow", () => {
     describe("For a valid question tree", () => {
         const answerLevel1: Answer = {
             content: "Content level 1",
@@ -36,14 +36,14 @@ describe("Answer flow", () => {
 
         it("has one more level than user choices count", () => {
             const userChoices: UserChoices = ["choice1_1" as ChoiceId];
-            const answerFlow = new AnswerFlow(questionTree, userChoices);
+            const answerFlow = new SupportFlow(questionTree, userChoices);
             expect(answerFlow.levels).toHaveLength(2);
             expect(answerFlow.finalAnswer).toBeUndefined();
         });
 
         it("sets the users choices as selected in the resulting flow", () => {
             const userChoices: UserChoices = ["choice1_1" as ChoiceId];
-            const answerFlow = new AnswerFlow(questionTree, userChoices);
+            const answerFlow = new SupportFlow(questionTree, userChoices);
             expect(answerFlow.levels).toHaveLength(2);
             expect(answerFlow.levels[0].choices[0].selected).toBeTruthy();
             expect(answerFlow.levels[0].choices[1].selected).toBeFalsy();
@@ -52,7 +52,7 @@ describe("Answer flow", () => {
 
         it("handles a content user choice at a single level", () => {
             const userChoices: UserChoices = ["choice1_2" as ChoiceId];
-            const answerFlow = new AnswerFlow(questionTree, userChoices);
+            const answerFlow = new SupportFlow(questionTree, userChoices);
             expect(answerFlow.levels).toHaveLength(1);
             expect(answerFlow.levels[0].choices[0].selected).toBeFalsy();
             expect(answerFlow.levels[0].choices[1].selected).toBeTruthy();
@@ -64,7 +64,7 @@ describe("Answer flow", () => {
                 "choice1_1" as ChoiceId,
                 "choice2_1" as ChoiceId,
             ];
-            const answerFlow = new AnswerFlow(questionTree, userChoices);
+            const answerFlow = new SupportFlow(questionTree, userChoices);
             expect(answerFlow.levels).toHaveLength(2);
             expect(answerFlow.levels[0].choices[0].selected).toBeTruthy();
             expect(answerFlow.levels[0].choices[1].selected).toBeFalsy();

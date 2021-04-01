@@ -14,14 +14,14 @@ function linkIsAQuestion(link: Question | Answer): link is Question {
     return (link as Question).choices !== undefined;
 }
 
-export class AnswerFlow {
+export class SupportFlow {
     readonly levels: Level[];
     readonly finalAnswer?: Answer;
 
     constructor(questionTree: Question, userChoices: UserChoices) {
         let finalAnswer: Answer | undefined = undefined;
         const setFinalAnswer = (answer: Answer) => (finalAnswer = answer);
-        const levels = AnswerFlow.getLevelsFromSelectedNode(
+        const levels = SupportFlow.getLevelsFromSelectedNode(
             questionTree,
             userChoices,
             setFinalAnswer
@@ -52,7 +52,7 @@ export class AnswerFlow {
         const userHasMadeAChoice = selectedChoice !== undefined;
 
         if (userHasMadeAChoice) {
-            subLevels = AnswerFlow.getLevelsFromSelectedNode(
+            subLevels = SupportFlow.getLevelsFromSelectedNode(
                 selectedChoice!.link,
                 userChoices,
                 finalAnswerSetter
