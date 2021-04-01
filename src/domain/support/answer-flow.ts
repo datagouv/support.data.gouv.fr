@@ -1,10 +1,4 @@
-import {
-    Choice,
-    ChoiceId,
-    Question,
-    Answer,
-    QuestionTitle,
-} from "./question-tree";
+import { Choice, ChoiceId, Question, Answer } from "./question-tree";
 
 export type SelectableChoice = Omit<Choice, "link"> & {
     selected: boolean;
@@ -21,56 +15,66 @@ function linkIsAQuestion(link: Question | Answer): link is Question {
 }
 
 export class AnswerFlow {
-    private constructor(public readonly levels: Level[]) {}
+    readonly levels: Level[];
+    readonly finalAnswer?: Answer;
 
-    static fromQuestionTreeAndUserChoices(
-        questionTree: Question,
-        userChoices: UserChoices
-    ): AnswerFlow {
-        const levels = this.getLevelsFromQuestionTree(
+    constructor(questionTree: Question, userChoices: UserChoices) {
+        const { levels, finalAnswer } = AnswerFlow.getLevelsFromQuestionTree(
             questionTree,
             userChoices
         );
-
-        return new this(levels);
+        this.levels = levels;
+        this.finalAnswer = finalAnswer;
     }
 
     private static getLevelsFromQuestionTree(
         questionTree: Question | Answer,
-        userChoices: UserChoices
-    ): Level[] {
+        userChoices: UserChoices,
+        finalAnswer?: Answer
+    ): { levels: Level[]; finalAnswer?: Answer } {
         if (!linkIsAQuestion(questionTree)) {
-            return [];
+            return { levels: [], finalAnswer: questionTree };
         }
         const selectedChoice = questionTree.choices.find((choice) =>
             userChoices.includes(choice.id)
         );
 
         if (selectedChoice) {
-            return [
+            const {
+                levels,
+                finalAnswer: nextFinalAnswer,
+            } = this.getLevelsFromQuestionTree(
+                selectedChoice.link,
+                userChoices,
+                finalAnswer
+            );
+            return {
+                levels: [
+                    {
+                        title: questionTree.title,
+                        choices: questionTree.choices.map((choice) => ({
+                            id: choice.id,
+                            label: choice.label,
+                            selected: userChoices.includes(choice.id),
+                        })),
+                    },
+                    ...levels,
+                ],
+                finalAnswer: nextFinalAnswer,
+            };
+        }
+        return {
+            levels: [
                 {
                     title: questionTree.title,
                     choices: questionTree.choices.map((choice) => ({
                         id: choice.id,
                         label: choice.label,
-                        selected: userChoices.includes(choice.id),
+                        selected: false,
                     })),
                 },
-                ...this.getLevelsFromQuestionTree(
-                    selectedChoice.link,
-                    userChoices
-                ),
-            ];
-        }
-        return [
-            {
-                title: questionTree.title,
-                choices: questionTree.choices.map((choice) => ({
-                    id: choice.id,
-                    label: choice.label,
-                    selected: false,
-                })),
-            },
-        ];
+            ],
+            finalAnswer,
+        };
     }
 }
