@@ -1,4 +1,4 @@
-data.gouv.fr support application.
+[data.gouv.fr](https://data.gouv.fr) support application.
 
 # Installation
 
