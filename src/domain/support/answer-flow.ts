@@ -19,62 +19,55 @@ export class AnswerFlow {
     readonly finalAnswer?: Answer;
 
     constructor(questionTree: Question, userChoices: UserChoices) {
-        const { levels, finalAnswer } = AnswerFlow.getLevelsFromQuestionTree(
+        let finalAnswer: Answer | undefined = undefined;
+        const setFinalAnswer = (answer: Answer) => (finalAnswer = answer);
+        const levels = AnswerFlow.getLevelsFromSelectedNode(
             questionTree,
-            userChoices
+            userChoices,
+            setFinalAnswer
         );
         this.levels = levels;
         this.finalAnswer = finalAnswer;
     }
 
-    private static getLevelsFromQuestionTree(
-        questionTree: Question | Answer,
+    get isFullyFilled(): boolean {
+        return this.finalAnswer !== undefined;
+    }
+
+    private static getLevelsFromSelectedNode(
+        node: Question | Answer,
         userChoices: UserChoices,
-        finalAnswer?: Answer
-    ): { levels: Level[]; finalAnswer?: Answer } {
-        if (!linkIsAQuestion(questionTree)) {
-            return { levels: [], finalAnswer: questionTree };
+        finalAnswerSetter: (answer: Answer) => void
+    ): Level[] {
+        if (!linkIsAQuestion(node)) {
+            finalAnswerSetter(node);
+            return [];
         }
-        const selectedChoice = questionTree.choices.find((choice) =>
+        const selectedChoice = node.choices.find((choice) =>
             userChoices.includes(choice.id)
         );
 
-        if (selectedChoice) {
-            const {
-                levels,
-                finalAnswer: nextFinalAnswer,
-            } = this.getLevelsFromQuestionTree(
-                selectedChoice.link,
+        let subLevels: Level[] = [];
+
+        const userHasMadeAChoice = selectedChoice !== undefined;
+
+        if (userHasMadeAChoice) {
+            subLevels = AnswerFlow.getLevelsFromSelectedNode(
+                selectedChoice!.link,
                 userChoices,
-                finalAnswer
+                finalAnswerSetter
             );
-            return {
-                levels: [
-                    {
-                        title: questionTree.title,
-                        choices: questionTree.choices.map((choice) => ({
-                            id: choice.id,
-                            label: choice.label,
-                            selected: userChoices.includes(choice.id),
-                        })),
-                    },
-                    ...levels,
-                ],
-                finalAnswer: nextFinalAnswer,
-            };
         }
-        return {
-            levels: [
-                {
-                    title: questionTree.title,
-                    choices: questionTree.choices.map((choice) => ({
-                        id: choice.id,
-                        label: choice.label,
-                        selected: false,
-                    })),
-                },
-            ],
-            finalAnswer,
-        };
+        return [
+            {
+                title: node.title,
+                choices: node.choices.map((choice) => ({
+                    id: choice.id,
+                    label: choice.label,
+                    selected: userChoices.includes(choice.id),
+                })),
+            },
+            ...subLevels,
+        ];
     }
 }
