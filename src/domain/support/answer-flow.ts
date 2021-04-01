@@ -22,7 +22,7 @@ export class AnswerFlow {
                 title: questionTree.title,
                 choices: questionTree.choices.map((choice) => ({
                     ...choice,
-                    selected: false,
+                    selected: userChoices.includes(choice.id),
                 })),
             },
         ]);
