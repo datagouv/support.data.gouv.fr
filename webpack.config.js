@@ -4,7 +4,7 @@ module.exports = {
     mode: "production",
     entry: "./src/infrastructure/client/index.ts",
     output: {
-        path: path.resolve(__dirname, "public"),
+        path: path.resolve(__dirname, "public", "js"),
         filename: "bundle.js",
     },
     module: {

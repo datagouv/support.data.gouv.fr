@@ -10,6 +10,7 @@ nunjucks.configure("views", {
 });
 
 export const init = () => {
+    app.use(express.static("public"));
     app.get("/", displaySupportFlow);
     app.listen(port);
 
