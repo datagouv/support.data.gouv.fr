@@ -7,7 +7,7 @@
     "clean": "rimraf public/js",
     "start:dev": "run-p clean start:dev:*",
     "start:dev:client": "webpack --watch --mode=development --devtool=eval-source-map",
-    "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.nj' src/infrastructure",
+    "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.nj,src/**/*.yaml' src/infrastructure",
     "test": "jest"
   },
   "repository": {
@@ -38,6 +38,7 @@
     "@hotwired/turbo": "^7.0.0-beta.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.3",
+    "yaml": "^1.10.2"
   }
 }
