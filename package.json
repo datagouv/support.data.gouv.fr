@@ -3,11 +3,15 @@
   "version": "0.0.1",
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "webpack",
+    "build": "run-p build:*",
+    "build:client": "webpack",
+    "build:prod": "tsc --project tsconfig.json",
     "clean": "rimraf public/js",
+    "start": "npm run start:prod",
     "start:dev": "run-p clean start:dev:*",
     "start:dev:client": "webpack --watch --mode=development --devtool=eval-source-map",
     "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.nj,src/**/*.yaml' src/infrastructure",
+    "start:prod": "node dist/infrastructure",
     "test": "jest"
   },
   "repository": {
