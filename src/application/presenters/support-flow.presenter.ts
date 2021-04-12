@@ -4,17 +4,8 @@ export const supportFlowPresenter = (
     supportFlow: SupportFlow,
     userChoices: UserChoices
 ) => {
-    const choicesPrefixes = userChoices.reduce(
-        (choicesPrefixes: string[], userChoice, index) => {
-            if (index === 0) {
-                return [userChoice];
-            }
-            return [
-                ...choicesPrefixes,
-                choicesPrefixes[choicesPrefixes.length - 1] + "/" + userChoice,
-            ];
-        },
-        []
+    const choicesPrefixes = userChoices.map((_, index) =>
+        userChoices.slice(0, index + 1).join("/")
     );
     return {
         supportFlow,
