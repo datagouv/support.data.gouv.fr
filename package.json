@@ -2,11 +2,11 @@
   "name": "support.data.gouv.fr",
   "version": "0.0.1",
   "scripts": {
-    "prebuild": "clean",
+    "prebuild": "npm run clean",
     "build": "webpack",
     "clean": "rimraf public/js",
     "start:dev": "run-p clean start:dev:*",
-    "start:dev:client": "webpack --watch --mode=development",
+    "start:dev:client": "webpack --watch --mode=development --devtool=eval-source-map",
     "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.nj' src/infrastructure",
     "test": "jest"
   },
