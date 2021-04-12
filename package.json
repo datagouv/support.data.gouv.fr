@@ -7,7 +7,7 @@
     "clean": "rimraf public/js",
     "start:dev": "run-p clean start:dev:*",
     "start:dev:client": "webpack --watch --mode=development",
-    "start:dev:server": "ts-node src/infrastructure",
+    "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.nj' src/infrastructure",
     "test": "jest"
   },
   "repository": {
@@ -29,6 +29,7 @@
     "ts-jest": "^26.5.4",
     "ts-loader": "^8.1.0",
     "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.6",
     "typescript": "^4.2.3",
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0"
