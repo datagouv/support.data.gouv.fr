@@ -14,6 +14,12 @@
 
 -   `npm run test`
 
+# Architecture decision records
+
+1.  [Record architecture decisions](./doc/adr/0001-record-architecture-decisions.md)
+2.  [Domain-driven design](./doc/adr/0002-domain-driven-design.md)
+3.  [Server-side rendering](./doc/adr/0003-server-side-rendering.md)
+
 # Inspirations
 
 -   [api.gouv.fr support page](https://api.gouv.fr/parcours-client)
