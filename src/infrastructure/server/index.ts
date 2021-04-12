@@ -1,6 +1,6 @@
 import express from "express";
 import nunjucks from "nunjucks";
-import { displaySupportFlow } from "../../application/controllers/support-flow.controller";
+import { attachControllersToApp } from "../../presentation/controllers";
 import { port } from "../config";
 
 const app = express();
@@ -11,7 +11,8 @@ nunjucks.configure("views", {
 
 export const init = () => {
     app.use(express.static("public"));
-    app.get("/", displaySupportFlow);
+    attachControllersToApp(app);
+
     app.listen(port);
 
     console.log(`App started, visit http://localhost:${port}`);

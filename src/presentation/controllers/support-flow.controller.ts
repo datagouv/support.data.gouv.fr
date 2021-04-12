@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
 
-export const displaySupportFlow = (req: Request, res: Response) => {
+export const navigateSupportFlow = (req: Request, res: Response) => {
     res.render("index.nj");
 };
