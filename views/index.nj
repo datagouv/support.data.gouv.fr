@@ -6,6 +6,16 @@
         <script type="text/javascript" src="js/bundle.js" defer></script>
     </head>
     <body>
-        <h1>Hello there</h1>
+        <h1>Support data.gouv.fr</h1>
+        {% for level in supportFlow.levels %}
+        <h2>{{ level.title }}</h2>
+        <ol>
+            {% for choice in level.choices %}
+            <li>
+                {% if choice.selected %}[Selected] {% endif %}{{ choice.label }}
+            </li>
+            {% endfor %}
+        </ol>
+        {% endfor %}
     </body>
 </html>
