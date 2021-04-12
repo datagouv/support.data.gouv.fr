@@ -3,16 +3,22 @@
     <head>
         <title>Support data.gouv.fr</title>
         <meta charset="UTF-8" />
-        <script type="text/javascript" src="js/bundle.js" defer></script>
+        <script type="text/javascript" src="/js/bundle.js" defer></script>
     </head>
     <body>
         <h1>Support data.gouv.fr</h1>
-        {% for level in supportFlow.levels %}
+        {% for level in supportFlow.levels %} {% set prefix %}{{
+            choicesPrefixes[loop.index0 - 1]
+        }}{% endset %}
         <h2>{{ level.title }}</h2>
         <ol>
             {% for choice in level.choices %}
             <li>
-                {% if choice.selected %}[Selected] {% endif %}{{ choice.label }}
+                <a href="{{ prefix }}/{{ choice.id }}"
+                    >{% if choice.selected %}[Selected] {% endif %}{{
+                        choice.label
+                    }}</a
+                >
             </li>
             {% endfor %}
         </ol>
