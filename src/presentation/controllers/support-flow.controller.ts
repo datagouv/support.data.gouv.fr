@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import { navigateSupportFlowUseCase } from "../../application/usecases/navigate-support-flow.usecase";
-import { ChoiceId } from "../../domain/support/question-tree";
 import { UserChoices } from "../../domain/support/support-flow";
 import { questionTree } from "../../infrastructure/config";
 

@@ -25,7 +25,9 @@
                 </li>
                 {% endfor %}
             </ol>
-            {% endfor %}
+            {% endfor %} {% if supportFlow.isFullyFilled %}
+            {{ supportFlow.finalAnswer.content | safe }}
+            {% endif %}
         </turbo-frame>
     </body>
 </html>

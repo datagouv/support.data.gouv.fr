@@ -1,0 +1,58 @@
+{
+    "title": "Qui êtes-vous ?",
+    "choices": [
+        {
+            "id": "un-particulier",
+            "label": "Un particulier",
+            "link": {
+                "title": "Comment pouvons-nous vous aider ?",
+                "choices": [
+                    {
+                        "id": "donnees-caractere-personnel",
+                        "label": "J'ai une question relative à des données à caractère personnel",
+                        "link": {
+                            "title": "Votre question concerne :",
+                            "choices": [
+                                {
+                                    "id": "demandes-valeurs-foncieres",
+                                    "label": "La base de données des demandes de valeurs foncières (transactions immobilières)",
+                                    "link": {
+                                        "content": "TBD"
+                                    }
+                                },
+                                {
+                                    "id": "rna",
+                                    "label": "Le Repertoire national des associations (RNA)",
+                                    "link": {
+                                        "content": "TBD"
+                                    }
+                                },
+                                {
+                                    "id": "base-sirene",
+                                    "label": "La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)",
+                                    "link": {
+                                        "content": "TBD"
+                                    }
+                                },
+                                {
+                                    "id": "fichier-personnes-decedees",
+                                    "label": "Le fichier des personnes décédées",
+                                    "link": {
+                                        "content": "TBD"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "choice1_2",
+            "label": "Choice 1 2",
+            "link": {
+                "content": "Content level 1"
+            }
+        }
+    ]
+}
