@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { supportFlowPresenter } from "../../application/presenters/support-flow.presenter";
 import { navigateSupportFlowUseCase } from "../../application/usecases/navigate-support-flow.usecase";
 import { UserChoices } from "../../domain/support/support-flow";
 import { questionTree } from "../../infrastructure/config";
@@ -10,18 +11,5 @@ export const navigateSupportFlow = (req: Request, res: Response) => {
 
     const supportFlow = navigateSupportFlowUseCase(questionTree, userChoices);
 
-    const choicesPrefixes = userChoices.reduce(
-        (choicesPrefixes: string[], userChoice, index) => {
-            if (index === 0) {
-                return [userChoice];
-            }
-            return [
-                ...choicesPrefixes,
-                choicesPrefixes[choicesPrefixes.length - 1] + "/" + userChoice,
-            ];
-        },
-        []
-    );
-
-    res.render("index.nj", { supportFlow, choicesPrefixes });
+    res.render("index.nj", supportFlowPresenter(supportFlow, userChoices));
 };
