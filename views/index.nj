@@ -7,21 +7,25 @@
     </head>
     <body>
         <h1>Support data.gouv.fr</h1>
-        {% for level in supportFlow.levels %} {% set prefix %}{{
-            choicesPrefixes[loop.index0 - 1]
-        }}{% endset %}
-        <h2>{{ level.title }}</h2>
-        <ol>
-            {% for choice in level.choices %}
-            <li>
-                <a href="{{ prefix }}/{{ choice.id }}"
-                    >{% if choice.selected %}[Selected] {% endif %}{{
-                        choice.label
-                    }}</a
-                >
-            </li>
+        <turbo-frame id="support-tree">
+            {% for level in supportFlow.levels %} {% set prefix %}{{
+                choicesPrefixes[loop.index0 - 1]
+            }}{% endset %}
+            <h2>{{ level.title }}</h2>
+            <ol>
+                {% for choice in level.choices %}
+                <li>
+                    <a
+                        href="{{ prefix }}/{{ choice.id }}"
+                        data-turbo-action="replace"
+                        >{% if choice.selected %}[Selected] {% endif %}{{
+                            choice.label
+                        }}</a
+                    >
+                </li>
+                {% endfor %}
+            </ol>
             {% endfor %}
-        </ol>
-        {% endfor %}
+        </turbo-frame>
     </body>
 </html>
