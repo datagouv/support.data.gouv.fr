@@ -15,6 +15,18 @@ module.exports = {
                 use: "ts-loader",
                 exclude: /node_modules/,
             },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader", "postcss-loader"],
+            },
+            {
+                test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
+                use: ["file-loader"],
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                use: ["url-loader?limit=100000"],
+            },
         ],
     },
 };
