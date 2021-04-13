@@ -9,7 +9,7 @@ nunjucks.configure("views", {
     express: app,
 });
 
-export const init = () => {
+export const init = (): void => {
     app.use(express.static("public"));
     attachControllersToApp(app);
 

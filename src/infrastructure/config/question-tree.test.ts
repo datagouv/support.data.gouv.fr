@@ -1,27 +1,53 @@
-import { Question } from "../../domain/support/question-tree";
+import { Question, Choice } from "../../domain/support/question-tree";
 import { questionTree } from ".";
 
-const checkType = (questionTree: any): questionTree is Question => {
-    if (!questionTree.title) {
+const checkType = (questionTree: unknown): questionTree is Question => {
+    if (typeof questionTree !== "object" || !questionTree) {
         return false;
     }
-    if (!questionTree.choices) {
+    if (!("title" in questionTree)) {
         return false;
     }
-    if (!(questionTree.choices instanceof Array)) {
+    if (!("choices" in questionTree)) {
         return false;
     }
-    return questionTree.choices.reduce((acc: boolean, choice: any) => {
-        if (!choice.id) {
+    const candidate = questionTree as Question;
+    if (typeof candidate.title !== "string") {
+        return false;
+    }
+    if (!candidate.choices) {
+        return false;
+    }
+    if (!(candidate.choices instanceof Array)) {
+        return false;
+    }
+    return candidate.choices.reduce((acc: boolean, choice: unknown) => {
+        if (typeof choice !== "object" || !choice) {
             return false;
         }
-        if (!choice.label) {
+        if (!("id" in choice)) {
             return false;
         }
-        if (!choice.link) {
+        if (!("label" in choice)) {
             return false;
         }
-        return acc && (choice.link.content || checkType(choice.link));
+        if (!("link" in choice)) {
+            return false;
+        }
+        const candidate = choice as Choice;
+        if (!candidate.id) {
+            return false;
+        }
+        if (!candidate.label) {
+            return false;
+        }
+        if (!candidate.link) {
+            return false;
+        }
+        if ("content" in candidate.link) {
+            return acc && candidate.link.content !== undefined;
+        }
+        return acc && checkType(candidate.link);
     }, true);
 };
 

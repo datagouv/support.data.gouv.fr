@@ -43,17 +43,18 @@ export class SupportFlow {
             finalAnswerSetter(node);
             return [];
         }
-        const selectedChoice = node.choices.find((choice) =>
+        const choiceCandidate = node.choices.find((choice) =>
             userChoices.includes(choice.id)
         );
 
         let subLevels: Level[] = [];
 
-        const userHasMadeAChoice = selectedChoice !== undefined;
+        const userHasMadeAChoice = choiceCandidate !== undefined;
+        const selectedChoice = choiceCandidate as Choice;
 
         if (userHasMadeAChoice) {
             subLevels = SupportFlow.getLevelsFromSelectedNode(
-                selectedChoice!.link,
+                selectedChoice.link,
                 userChoices,
                 finalAnswerSetter
             );

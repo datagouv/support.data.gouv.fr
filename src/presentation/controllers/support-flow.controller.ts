@@ -4,7 +4,7 @@ import { navigateSupportFlowUseCase } from "../../application/usecases/navigate-
 import { UserChoices } from "../../domain/support/support-flow";
 import { questionTree } from "../../infrastructure/config";
 
-export const navigateSupportFlow = (req: Request, res: Response) => {
+export const navigateSupportFlow = (req: Request, res: Response): void => {
     const userChoices = req.path
         .split("/")
         .filter((chunck) => chunck !== "") as UserChoices;
