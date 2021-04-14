@@ -11,7 +11,7 @@
     "start": "npm run start:prod",
     "start:dev": "run-p clean start:dev:*",
     "start:dev:client": "webpack --watch --mode=development --devtool=eval-source-map",
-    "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.nj,src/**/*.yaml' src/infrastructure",
+    "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.nj,src/**/*.yaml,public/dist/manifest.json' src/infrastructure",
     "start:prod": "node dist/infrastructure",
     "test": "jest"
   },
@@ -52,7 +52,8 @@
     "typescript": "^4.2.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.31.2",
-    "webpack-cli": "^4.6.0"
+    "webpack-cli": "^4.6.0",
+    "webpack-manifest-plugin": "^3.1.1"
   },
   "dependencies": {
     "@gouvfr/dsfr": "^1.0.0-rc1.0",

@@ -3,8 +3,8 @@
     <head>
         <title>Support data.gouv.fr</title>
         <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="/dist/main.css">
-        <script type="text/javascript" src="/dist/main.js" defer></script>
+        <link rel="stylesheet" href="/dist/{{ mainCss }}">
+        <script type="text/javascript" src="/dist/{{ mainJs }}" defer></script>
     </head>
     <body>
         <h1>Support data.gouv.fr</h1>

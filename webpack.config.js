@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
 module.exports = {
     mode: "production",
@@ -8,9 +9,12 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "public", "dist"),
-        filename: "[name].js",
+        filename: "[name]-[contenthash].js",
     },
-    plugins: [new MiniCssExtractPlugin()],
+    plugins: [
+        new MiniCssExtractPlugin({ filename: "[name]-[contenthash].css" }),
+        new WebpackManifestPlugin({ publicPath: "" }),
+    ],
     devtool: "source-map",
     module: {
         rules: [
