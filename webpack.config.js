@@ -2,20 +2,24 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
+const devMode = process.env.NODE_ENV !== "production";
+
 module.exports = {
-    mode: "production",
+    mode: devMode ? "development" : "production",
     entry: {
         main: "./src/presentation/client/index.ts",
     },
     output: {
         path: path.resolve(__dirname, "public", "dist"),
-        filename: "[name]-[contenthash].js",
+        filename: devMode ? "[name].js" : "[name]-[contenthash].js",
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: "[name]-[contenthash].css" }),
+        new MiniCssExtractPlugin({
+            filename: devMode ? "[name].css" : "[name]-[contenthash].css",
+        }),
         new WebpackManifestPlugin({ publicPath: "" }),
     ],
-    devtool: "source-map",
+    devtool: devMode ? "eval-source-map" : "source-map",
     module: {
         rules: [
             {
@@ -34,10 +38,6 @@ module.exports = {
             {
                 test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,
                 use: ["file-loader"],
-            },
-            {
-                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-                use: ["url-loader?limit=100000"],
             },
         ],
     },

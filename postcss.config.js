@@ -1,10 +1,11 @@
 const purgecss = require("@fullhuman/postcss-purgecss");
+const tailwincss = require("tailwindcss");
 
 module.exports = {
     plugins: [
         "postcss-import",
         "postcss-url",
-        "tailwindcss",
+        tailwincss({ purge: false }),
         "autoprefixer",
         purgecss({
             content: ["./views/**/*.njk"],
