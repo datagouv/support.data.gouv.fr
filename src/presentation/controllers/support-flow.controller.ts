@@ -11,5 +11,5 @@ export const navigateSupportFlow = (req: Request, res: Response): void => {
 
     const supportFlow = navigateSupportFlowUseCase(questionTree, userChoices);
 
-    res.render("index.nj", supportFlowPresenter(supportFlow, userChoices));
+    res.render("index.njk", supportFlowPresenter(supportFlow, userChoices));
 };

@@ -7,7 +7,7 @@ module.exports = {
         "tailwindcss",
         "autoprefixer",
         purgecss({
-            content: ["./views/**/*.nj"],
+            content: ["./views/**/*.njk"],
         }),
     ],
 };

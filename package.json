@@ -11,7 +11,7 @@
     "start": "npm run start:prod",
     "start:dev": "run-p clean start:dev:*",
     "start:dev:client": "webpack --watch --mode=development --devtool=eval-source-map",
-    "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.nj,src/**/*.yaml,public/dist/manifest.json' src/infrastructure",
+    "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.njk,src/**/*.yaml,public/dist/manifest.json' src/infrastructure",
     "start:prod": "node dist/infrastructure",
     "test": "jest"
   },
