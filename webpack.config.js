@@ -1,12 +1,16 @@
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: "production",
-    entry: "./src/presentation/client/index.ts",
-    output: {
-        path: path.resolve(__dirname, "public", "js"),
-        filename: "bundle.js",
+    entry: {
+        main: "./src/presentation/client/index.ts",
     },
+    output: {
+        path: path.resolve(__dirname, "public", "dist"),
+        filename: "[name].js",
+    },
+    plugins: [new MiniCssExtractPlugin()],
     devtool: "source-map",
     module: {
         rules: [
@@ -17,7 +21,11 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader", "postcss-loader"],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                ],
             },
             {
                 test: /\.(eot|woff|woff2|svg|ttf)([\?]?.*)$/,

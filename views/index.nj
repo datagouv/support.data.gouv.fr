@@ -2,31 +2,29 @@
 <html>
     <head>
         <title>Support data.gouv.fr</title>
-        <meta charset="UTF-8" />
-        <script type="text/javascript" src="/js/bundle.js" defer></script>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="/dist/main.css">
+        <script type="text/javascript" src="/dist/main.js" defer></script>
     </head>
     <body>
         <h1>Support data.gouv.fr</h1>
         <turbo-frame id="support-tree">
-            {% for level in supportFlow.levels %} {% set prefix %}{{
-                choicesPrefixes[loop.index0 - 1]
-            }}{% endset %}
-            <h2>{{ level.title }}</h2>
-            <ol>
-                {% for choice in level.choices %}
-                <li>
-                    <a
-                        href="{{ prefix }}/{{ choice.id }}"
-                        data-turbo-action="replace"
-                        >{% if choice.selected %}[Selected] {% endif %}{{
-                            choice.label
-                        }}</a
-                    >
-                </li>
-                {% endfor %}
-            </ol>
-            {% endfor %} {% if supportFlow.isFullyFilled %}
-            {{ supportFlow.finalAnswer.content | safe }}
+            {% for level in supportFlow.levels %}
+                {% set prefix %}{{ choicesPrefixes[loop.index0 - 1] }}{% endset %}
+                <h2>{{ level.title }}</h2>
+                <ol>
+                    {% for choice in level.choices %}
+                        <li>
+                            <a href="{{ prefix }}/{{ choice.id }}" data-turbo-action="replace">
+                                {% if choice.selected %}[Selected]
+                                {% endif %}
+                                {{ choice.label }}</a>
+                        </li>
+                    {% endfor %}
+                </ol>
+            {% endfor %}
+            {% if supportFlow.isFullyFilled %}
+                {{ supportFlow.finalAnswer.content | safe }}
             {% endif %}
         </turbo-frame>
     </body>
