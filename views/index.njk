@@ -3,21 +3,19 @@
     Support data.gouv.fr
 {% endblock %}
 {% block body %}
-    <h1>Support data.gouv.fr</h1>
+    <h1 class="mb-12">Bonjour 👋, comment pouvons-nous vous aider ?
+    </h1>
+    <p>Pour commencer, nous aimerions faire connaissance :</p>
     <turbo-frame id="support-tree">
         {% for level in supportFlow.levels %}
             {% set prefix %}{{ choicesPrefixes[loop.index0 - 1] }}{% endset %}
-            <h2>{{ level.title }}</h2>
-            <ol>
+            <h2 class="text-base font-black mt-4 mb-1">{{ level.title }}</h2>
+            <div class="flex flex-wrap">
                 {% for choice in level.choices %}
-                    <li>
-                        <a href="{{ prefix }}/{{ choice.id }}" data-turbo-action="replace">
-                            {% if choice.selected %}[Selected]
-                            {% endif %}
-                            {{ choice.label }}</a>
-                    </li>
+                    <a class="bg-blue-100 px-4 py-2 m-0.5 shadow-none rounded-md border-solid border-2 hover:border-blue-700 {% if choice.selected %}border-blue-700{% else %}border-transparent{% endif %}" href="{{ prefix }}/{{ choice.id }}" data-turbo-action="replace">
+                        {{ choice.label }}</a>
                 {% endfor %}
-            </ol>
+            </div>
         {% endfor %}
         {% if supportFlow.isFullyFilled %}
             {{ supportFlow.finalAnswer.content | safe }}

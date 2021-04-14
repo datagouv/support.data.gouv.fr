@@ -4,6 +4,8 @@
         {% include 'includes/head.njk' %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
+        {% include 'includes/header.njk' %}
+        <div class="md:max-w-screen-md mx-auto mt-16"> {% block body %}{% endblock %}
+            </div>
+        </body>
+    </html>

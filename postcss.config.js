@@ -7,7 +7,9 @@ module.exports = {
     plugins: [
         "postcss-import",
         "postcss-url",
-        tailwincss({ purge: false }),
+        tailwincss({
+            purge: false,
+        }),
         "autoprefixer",
         devMode
             ? ""
