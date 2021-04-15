@@ -11,7 +11,7 @@ import { checkRawQuestionTreeType } from "./raw-question-tree.guard";
 
 export type RawChoice = {
     label: string;
-    link: { content: string } | RawQuestionTree;
+    link: { content: string } | { path: string } | RawQuestionTree;
 };
 
 export type RawQuestionTree = {
@@ -42,6 +42,8 @@ const refineRawQuestion = (rawQuestion: RawQuestionTree): Question => {
                 const link =
                     "content" in choice.link
                         ? choice.link
+                        : "path" in choice.link
+                        ? { content: choice.link.path }
                         : refineRawQuestion(choice.link);
                 return {
                     id: uuidv4() as ChoiceId,

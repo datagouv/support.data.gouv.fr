@@ -42,6 +42,9 @@ export const checkRawQuestionTreeType = (
         if ("content" in candidate.link) {
             return acc && candidate.link.content !== undefined;
         }
+        if ("path" in candidate.link) {
+            return acc && candidate.link.path !== undefined;
+        }
         return acc && checkRawQuestionTreeType(candidate.link);
     }, true);
 };
