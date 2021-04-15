@@ -14,7 +14,7 @@ describe("The question tree factory", () => {
             (((questionTree.choices[0].link as Question).choices[0]
                 .link as Question).choices[0].link as Answer).content
         ).toEqual(
-            "<p>Réponse pour <strong>demandes valeurs foncières</strong>.</p>\n"
+            "<p>Réponse pour <strong>demandes valeurs foncières</strong>.</p>\n<p><button>Contacter Georges Moustaki</button></p>\n"
         );
     });
 });
