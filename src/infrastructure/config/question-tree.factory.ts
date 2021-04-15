@@ -116,5 +116,6 @@ export const buildQuestionTree = (): Question => {
         "utf8"
     );
 
-    return YAML.parse(yamlFileContent) as Question;
+    const rawQuestionTree = YAML.parse(yamlFileContent) as unknown;
+    return rawQuestionTree as Question;
 };
