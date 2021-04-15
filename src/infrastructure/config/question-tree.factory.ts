@@ -3,6 +3,7 @@ import * as path from "path";
 import YAML from "yaml";
 import { v4 as uuidv4 } from "uuid";
 import {
+    Answer,
     Choice,
     ChoiceId,
     Question,
@@ -43,23 +44,27 @@ const refineRawQuestion = (
         title: rawQuestion.title as QuestionTitle,
         choices: rawQuestion.choices.map(
             (choice: RawChoice): Choice => {
-                const link =
-                    "content" in choice.link
-                        ? choice.link
-                        : "path" in choice.link
-                        ? {
-                              content: fs.readFileSync(
-                                  basePath + "/" + choice.link.path,
-                                  "utf-8"
-                              ),
-                          }
-                        : refineRawQuestion(choice.link, basePath);
                 return {
                     id: uuidv4() as ChoiceId,
                     label: choice.label,
-                    link,
+                    link: refineRawLink(choice.link, basePath),
                 };
             }
         ),
     };
+};
+
+const refineRawLink = (
+    rawLink: { content: string } | { path: string } | RawQuestionTree,
+    basePath: string
+): Answer | Question => {
+    if ("content" in rawLink) {
+        return rawLink;
+    }
+    if ("path" in rawLink) {
+        return {
+            content: fs.readFileSync(basePath + "/" + rawLink.path, "utf-8"),
+        };
+    }
+    return refineRawQuestion(rawLink, basePath);
 };
