@@ -1,5 +1,5 @@
 import { Question, Choice } from "../../domain/support/question-tree";
-import { questionTree } from ".";
+import { buildQuestionTree } from "./question-tree.factory";
 
 const checkType = (questionTree: unknown): questionTree is Question => {
     if (typeof questionTree !== "object" || !questionTree) {
@@ -51,8 +51,9 @@ const checkType = (questionTree: unknown): questionTree is Question => {
     }, true);
 };
 
-describe("The question tree", () => {
-    it("must be valid", () => {
+describe("The question tree factory", () => {
+    const questionTree = buildQuestionTree();
+    it("builds valid question trees", () => {
         expect(checkType(questionTree)).toBeTruthy();
     });
 });
