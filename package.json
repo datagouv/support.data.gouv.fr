@@ -2,7 +2,8 @@
   "name": "support.data.gouv.fr",
   "version": "0.1.0",
   "engines": {
-    "node": "14.x"
+    "node": "14.x",
+    "npm": "7.x"
   },
   "scripts": {
     "prebuild": "npm run clean",
