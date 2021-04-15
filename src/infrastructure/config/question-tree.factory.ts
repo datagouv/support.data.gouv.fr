@@ -2,7 +2,6 @@ import * as fs from "fs";
 import YAML from "yaml";
 import { v4 as uuidv4 } from "uuid";
 import {
-    Answer,
     Choice,
     ChoiceId,
     Question,
@@ -77,8 +76,7 @@ export const buildQuestionTree = (): Question => {
         throw new Error("Invalid question tree format");
     }
 
-    const questionTree: Question = refineRawQuestion(rawQuestionTree);
-    return questionTree;
+    return refineRawQuestion(rawQuestionTree);
 };
 
 const refineRawQuestion = (rawQuestion: RawQuestionTree): Question => {
@@ -86,12 +84,10 @@ const refineRawQuestion = (rawQuestion: RawQuestionTree): Question => {
         title: rawQuestion.title as QuestionTitle,
         choices: rawQuestion.choices.map(
             (choice: RawChoice): Choice => {
-                let link: Answer | Question;
-                if ("content" in choice.link) {
-                    link = { content: choice.link.content };
-                } else {
-                    link = refineRawQuestion(choice.link);
-                }
+                const link =
+                    "content" in choice.link
+                        ? choice.link
+                        : refineRawQuestion(choice.link);
                 return {
                     id: uuidv4() as ChoiceId,
                     label: choice.label,
