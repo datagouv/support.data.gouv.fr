@@ -18,3 +18,9 @@ describe("The question tree factory", () => {
         );
     });
 });
+
+describe("The configured question tree", () => {
+    it("is valid", () => {
+        expect(buildQuestionTree).not.toThrowError();
+    });
+});

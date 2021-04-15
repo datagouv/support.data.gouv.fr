@@ -12,7 +12,7 @@ choices:
         - label: La base de données des demandes de valeurs foncières (transactions
             immobilières)
           link:
-            content: TBD
+            path: answers/demandes-valeurs-foncieres.md
         - label: Le Repertoire national des associations (RNA)
           link:
             content: TBD
