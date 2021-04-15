@@ -1,19 +1,8 @@
 import * as dotenv from "dotenv";
-import fs from "fs";
-import YAML from "yaml";
-import { Question } from "../../domain/support/question-tree";
+import { buildQuestionTree } from "./question-tree.factory";
 
 dotenv.config();
 
 export const port = process.env.PORT;
-
-const buildQuestionTree = (): Question => {
-    const yamlFileContent = fs.readFileSync(
-        "config/question-tree.yaml",
-        "utf8"
-    );
-
-    return YAML.parse(yamlFileContent) as Question;
-};
 
 export const questionTree = buildQuestionTree();
