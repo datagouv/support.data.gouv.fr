@@ -2,6 +2,8 @@ import * as fs from "fs";
 import YAML from "yaml";
 import { Choice, Question } from "../../domain/support/question-tree";
 
+export type RawQuestionTree = { title: string };
+
 export const checkQuestionTreeType = (
     questionTree: unknown
 ): questionTree is Question => {
