@@ -2,6 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import YAML from "yaml";
 import { v4 as uuidv4 } from "uuid";
+import marked from "marked";
 import {
     Answer,
     Choice,
@@ -63,7 +64,9 @@ const refineRawLink = (
     }
     if ("path" in rawLink) {
         return {
-            content: fs.readFileSync(basePath + "/" + rawLink.path, "utf-8"),
+            content: marked(
+                fs.readFileSync(basePath + "/" + rawLink.path, "utf-8")
+            ),
         };
     }
     return refineRawQuestion(rawLink, basePath);

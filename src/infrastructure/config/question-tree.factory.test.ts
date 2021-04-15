@@ -8,11 +8,13 @@ describe("The question tree factory", () => {
         expect(functionToTest).not.toThrowError();
     });
 
-    it("reads content from config file", () => {
+    it("reads and parses content from config file", () => {
         const questionTree = functionToTest();
         expect(
             (((questionTree.choices[0].link as Question).choices[0]
                 .link as Question).choices[0].link as Answer).content
-        ).toEqual("Réponse pour **demandes valeurs foncières**.\n");
+        ).toEqual(
+            "<p>Réponse pour <strong>demandes valeurs foncières</strong>.</p>\n"
+        );
     });
 });
