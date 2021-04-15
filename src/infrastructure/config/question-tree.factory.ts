@@ -7,8 +7,9 @@ import {
     Question,
     QuestionTitle,
 } from "../../domain/support/question-tree";
+import { checkRawQuestionTreeType } from "./raw-question-tree.guard";
 
-type RawChoice = {
+export type RawChoice = {
     label: string;
     link: { content: string } | RawQuestionTree;
 };
@@ -16,52 +17,6 @@ type RawChoice = {
 export type RawQuestionTree = {
     title: string;
     choices: RawChoice[];
-};
-
-export const checkRawQuestionTreeType = (
-    rawQuestionTree: unknown
-): rawQuestionTree is RawQuestionTree => {
-    if (typeof rawQuestionTree !== "object" || !rawQuestionTree) {
-        return false;
-    }
-    if (!("title" in rawQuestionTree)) {
-        return false;
-    }
-    if (!("choices" in rawQuestionTree)) {
-        return false;
-    }
-    const candidate = rawQuestionTree as RawQuestionTree;
-    if (typeof candidate.title !== "string") {
-        return false;
-    }
-    if (!candidate.choices) {
-        return false;
-    }
-    if (!(candidate.choices instanceof Array)) {
-        return false;
-    }
-    return candidate.choices.reduce((acc: boolean, choice: unknown) => {
-        if (typeof choice !== "object" || !choice) {
-            return false;
-        }
-        if (!("label" in choice)) {
-            return false;
-        }
-        if (!("link" in choice)) {
-            return false;
-        }
-        const candidate = choice as RawChoice;
-        if (!candidate.label) {
-            return false;
-        }
-        if (!candidate.link) {
-            return false;
-        }
-        if ("content" in candidate.link) {
-            return acc && candidate.link.content !== undefined;
-        }
-        return acc && checkRawQuestionTreeType(candidate.link);
-    }, true);
 };
 
 export const buildQuestionTree = (): Question => {
