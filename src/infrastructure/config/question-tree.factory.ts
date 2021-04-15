@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import * as path from "path";
 import YAML from "yaml";
 import { v4 as uuidv4 } from "uuid";
 import {
@@ -19,9 +20,9 @@ export type RawQuestionTree = {
     choices: RawChoice[];
 };
 
-export const buildQuestionTree = (): Question => {
+export const buildQuestionTree = (basePath = "config"): Question => {
     const yamlFileContent = fs.readFileSync(
-        "config/question-tree.yaml",
+        path.resolve(basePath, "question-tree.yaml"),
         "utf8"
     );
 
