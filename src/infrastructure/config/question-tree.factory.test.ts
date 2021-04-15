@@ -1,11 +1,26 @@
-import {
-    buildQuestionTree,
-    checkQuestionTreeType,
-} from "./question-tree.factory";
+import { Answer, Question } from "../../domain/support/question-tree";
+import { buildQuestionTree } from "./question-tree.factory";
 
 describe("The question tree factory", () => {
-    const questionTree = buildQuestionTree();
+    const functionToTest = () => buildQuestionTree(__dirname + "/__tests__");
+
     it("builds valid question trees", () => {
-        expect(checkQuestionTreeType(questionTree)).toBeTruthy();
+        expect(functionToTest).not.toThrowError();
+    });
+
+    it("reads and parses content from config file", () => {
+        const questionTree = functionToTest();
+        expect(
+            (((questionTree.choices[0].link as Question).choices[0]
+                .link as Question).choices[0].link as Answer).content
+        ).toEqual(
+            "<p>Réponse pour <strong>demandes valeurs foncières</strong>.</p>\n<p><button>Contacter Georges Moustaki</button></p>\n"
+        );
+    });
+});
+
+describe("The configured question tree", () => {
+    it("is valid", () => {
+        expect(buildQuestionTree).not.toThrowError();
     });
 });
