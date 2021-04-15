@@ -1,6 +1,13 @@
 import * as fs from "fs";
 import YAML from "yaml";
-import { Choice, Question } from "../../domain/support/question-tree";
+import { v4 as uuidv4 } from "uuid";
+import {
+    Answer,
+    Choice,
+    ChoiceId,
+    Question,
+    QuestionTitle,
+} from "../../domain/support/question-tree";
 
 type RawChoice = {
     label: string;
@@ -116,6 +123,29 @@ export const buildQuestionTree = (): Question => {
         "utf8"
     );
 
-    const rawQuestionTree = YAML.parse(yamlFileContent) as unknown;
-    return rawQuestionTree as Question;
+    const rawQuestionTree = YAML.parse(yamlFileContent) as RawQuestionTree;
+
+    const questionTree: Question = refineRawQuestion(rawQuestionTree);
+    return questionTree;
+};
+
+const refineRawQuestion = (rawQuestion: RawQuestionTree): Question => {
+    return {
+        title: rawQuestion.title as QuestionTitle,
+        choices: rawQuestion.choices.map(
+            (choice: RawChoice): Choice => {
+                let link: Answer | Question;
+                if ("content" in choice.link) {
+                    link = { content: choice.link.content };
+                } else {
+                    link = refineRawQuestion(choice.link);
+                }
+                return {
+                    id: uuidv4() as ChoiceId,
+                    label: choice.label,
+                    link,
+                };
+            }
+        ),
+    };
 };
