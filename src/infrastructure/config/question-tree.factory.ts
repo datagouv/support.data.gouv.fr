@@ -2,7 +2,9 @@ import * as fs from "fs";
 import YAML from "yaml";
 import { Choice, Question } from "../../domain/support/question-tree";
 
-export const checkType = (questionTree: unknown): questionTree is Question => {
+export const checkQuestionTreeType = (
+    questionTree: unknown
+): questionTree is Question => {
     if (typeof questionTree !== "object" || !questionTree) {
         return false;
     }
@@ -48,7 +50,7 @@ export const checkType = (questionTree: unknown): questionTree is Question => {
         if ("content" in candidate.link) {
             return acc && candidate.link.content !== undefined;
         }
-        return acc && checkType(candidate.link);
+        return acc && checkQuestionTreeType(candidate.link);
     }, true);
 };
 
