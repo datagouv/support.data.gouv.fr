@@ -1,11 +1,7 @@
-import {
-    buildQuestionTree,
-    checkQuestionTreeType,
-} from "./question-tree.factory";
+import { buildQuestionTree } from "./question-tree.factory";
 
 describe("The question tree factory", () => {
-    const questionTree = buildQuestionTree();
     it("builds valid question trees", () => {
-        expect(checkQuestionTreeType(questionTree)).toBeTruthy();
+        expect(buildQuestionTree).not.toThrowError();
     });
 });
