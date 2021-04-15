@@ -32,10 +32,13 @@ export const buildQuestionTree = (basePath = "config"): Question => {
         throw new Error("Invalid question tree format");
     }
 
-    return refineRawQuestion(rawQuestionTree);
+    return refineRawQuestion(rawQuestionTree, basePath);
 };
 
-const refineRawQuestion = (rawQuestion: RawQuestionTree): Question => {
+const refineRawQuestion = (
+    rawQuestion: RawQuestionTree,
+    basePath: string
+): Question => {
     return {
         title: rawQuestion.title as QuestionTitle,
         choices: rawQuestion.choices.map(
@@ -44,8 +47,13 @@ const refineRawQuestion = (rawQuestion: RawQuestionTree): Question => {
                     "content" in choice.link
                         ? choice.link
                         : "path" in choice.link
-                        ? { content: choice.link.path }
-                        : refineRawQuestion(choice.link);
+                        ? {
+                              content: fs.readFileSync(
+                                  basePath + "/" + choice.link.path,
+                                  "utf-8"
+                              ),
+                          }
+                        : refineRawQuestion(choice.link, basePath);
                 return {
                     id: uuidv4() as ChoiceId,
                     label: choice.label,

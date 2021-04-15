@@ -13,6 +13,6 @@ describe("The question tree factory", () => {
         expect(
             (((questionTree.choices[0].link as Question).choices[0]
                 .link as Question).choices[0].link as Answer).content
-        ).toEqual("answers/demandes-valeurs-foncieres.md");
+        ).toEqual("Réponse pour **demandes valeurs foncières**.\n");
     });
 });
