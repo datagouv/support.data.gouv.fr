@@ -1,8 +1,6 @@
 const purgecss = require("@fullhuman/postcss-purgecss");
 const tailwincss = require("tailwindcss");
 
-const devMode = process.env.NODE_ENV !== "production";
-
 module.exports = {
     plugins: [
         "postcss-import",
@@ -11,10 +9,18 @@ module.exports = {
             purge: false,
         }),
         "autoprefixer",
-        devMode
-            ? ""
-            : purgecss({
-                  content: ["./views/**/*.njk"],
-              }),
+        purgecss({
+            content: ["./views/**/*.njk"],
+            // see https://medium.com/@kyis/vue-tailwind-purgecss-the-right-way-c70d04461475#3f95
+            defaultExtractor: (content) => {
+                const contentWithoutStyleBlocks = content.replace(
+                    /<style[^]+?<\/style>/gi,
+                    ""
+                );
+                return (
+                    contentWithoutStyleBlocks.match(/[A-Za-z0-9-_/:\.]+/g) || []
+                );
+            },
+        }),
     ],
 };
