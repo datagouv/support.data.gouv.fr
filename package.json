@@ -32,6 +32,7 @@
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@types/express": "^4.17.11",
     "@types/jest": "^26.0.22",
+    "@types/marked": "^2.0.2",
     "@types/nunjucks": "^3.1.4",
     "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
