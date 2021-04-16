@@ -1,8 +1,14 @@
 const path = require("path");
+const glob = require("glob");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
+const PurgecssPlugin = require("purgecss-webpack-plugin");
+const ExtraWatchWebpackPlugin = require("extra-watch-webpack-plugin");
 
 const devMode = process.env.NODE_ENV !== "production";
+const PATHS = {
+    views: path.join(__dirname, "views"),
+};
 
 module.exports = {
     mode: devMode ? "development" : "production",
@@ -18,6 +24,22 @@ module.exports = {
             filename: devMode ? "[name].css" : "[name]-[contenthash].css",
         }),
         new WebpackManifestPlugin({ publicPath: "" }),
+        new ExtraWatchWebpackPlugin({
+            files: [],
+            dirs: [path.resolve(__dirname, "views")],
+        }),
+        new PurgecssPlugin({
+            paths: glob.sync(`${PATHS.views}/**/*`, { nodir: true }),
+            defaultExtractor: (content) => {
+                const contentWithoutStyleBlocks = content.replace(
+                    /<style[^]+?<\/style>/gi,
+                    ""
+                );
+                return (
+                    contentWithoutStyleBlocks.match(/[A-Za-z0-9-_/:\.]+/g) || []
+                );
+            },
+        }),
     ],
     devtool: devMode ? "eval-source-map" : "source-map",
     module: {
