@@ -64,10 +64,14 @@ const refineRawLink = (
     }
     if ("path" in rawLink) {
         return {
-            content: marked(
+            content: transformMarkdown(
                 fs.readFileSync(basePath + "/" + rawLink.path, "utf-8")
             ),
         };
     }
     return refineRawQuestion(rawLink, basePath);
+};
+
+const transformMarkdown = (markdownContent: string): string => {
+    return marked(markdownContent);
 };
