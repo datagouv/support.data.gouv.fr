@@ -7,6 +7,7 @@ const ExtraWatchWebpackPlugin = require("extra-watch-webpack-plugin");
 
 const devMode = process.env.NODE_ENV !== "production";
 const PATHS = {
+    config: path.join(__dirname, "config"),
     views: path.join(__dirname, "views"),
 };
 
@@ -26,10 +27,12 @@ module.exports = {
         new WebpackManifestPlugin({ publicPath: "" }),
         new ExtraWatchWebpackPlugin({
             files: [],
-            dirs: [path.resolve(__dirname, "views")],
+            dirs: [PATHS.config, PATHS.views],
         }),
         new PurgecssPlugin({
             paths: glob.sync(`${PATHS.views}/**/*`, { nodir: true }),
+            // Tell Purgecss to leave these selectors since they are injected at boot time in answers
+            safelist: ["justify-center", "w-full"],
             defaultExtractor: (content) => {
                 const contentWithoutStyleBlocks = content.replace(
                     /<style[^]+?<\/style>/gi,

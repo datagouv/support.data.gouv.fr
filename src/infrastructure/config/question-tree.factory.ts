@@ -75,6 +75,9 @@ const refineRawLink = (
 const transformMarkdown = (markdownContent: string): string => {
     const htmlContent = marked(markdownContent);
     return htmlContent
-        .replace("<button href", '<a class="button" href')
-        .replace("</button>", "</a>");
+        .replace(
+            "<button href",
+            '<div class="w-full flex justify-center"><a class="button" href'
+        )
+        .replace("</button>", "</a></div>");
 };
