@@ -47,10 +47,14 @@ module.exports = {
             {
                 test: /\.ts$/,
                 use: "ts-loader",
+                include: path.join(__dirname, "src", "presentation", "client"),
                 exclude: /node_modules/,
             },
             {
                 test: /\.css$/i,
+                include: [
+                    path.resolve(__dirname, "src", "presentation", "client"),
+                ],
                 use: [
                     MiniCssExtractPlugin.loader,
                     "css-loader",
@@ -62,5 +66,8 @@ module.exports = {
                 use: ["file-loader"],
             },
         ],
+    },
+    resolve: {
+        symlinks: false,
     },
 };
