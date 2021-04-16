@@ -15,7 +15,7 @@
     "start": "NODE_ENV=production npm run start:prod",
     "start:dev": "run-p start:dev:*",
     "start:dev:client": "webpack --watch",
-    "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.njk,config/**/*.yaml,public/dist/manifest.json' src/infrastructure",
+    "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.njk,config/**/*,public/dist/manifest.json' src/infrastructure",
     "start:prod": "node dist/infrastructure",
     "test": "jest"
   },
