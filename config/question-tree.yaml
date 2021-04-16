@@ -36,10 +36,7 @@ choices:
           En effet l'équipe de data.gouv.fr n'est pas à l'origine des données publiées sur la plateforme. Ce sont les producteurs des données qui sont à même de répondre.
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       link:
-        content: >
-          Pour toute demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver par exemple vous pouvez nous écrire à l'adresse ouverture@data.gouv.fr.<br>
-          Cette demande d'information n'est pas assimilable à une [saisie de la Commission d'accès aux documents administratifs (CADA)](https://www.cada.fr/particulier/quand-et-comment-saisir-la-cada).<br>
-          CTA : mailto:ouverture@data.gouv.fr
+        path: answers/demandes-ouverture.md
     - label: J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr
       link:
         content: >
