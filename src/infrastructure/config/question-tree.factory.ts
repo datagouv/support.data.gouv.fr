@@ -73,5 +73,8 @@ const refineRawLink = (
 };
 
 const transformMarkdown = (markdownContent: string): string => {
-    return marked(markdownContent);
+    const htmlContent = marked(markdownContent);
+    return htmlContent
+        .replace("<button href", '<a class="button" href')
+        .replace("</button>", "</a>");
 };

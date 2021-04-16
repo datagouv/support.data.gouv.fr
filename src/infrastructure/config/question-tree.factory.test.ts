@@ -10,11 +10,13 @@ describe("The question tree factory", () => {
 
     it("reads and parses content from config file", () => {
         const questionTree = functionToTest();
-        expect(
-            (((questionTree.choices[0].link as Question).choices[0]
-                .link as Question).choices[0].link as Answer).content
-        ).toEqual(
-            "<p>Réponse pour <strong>demandes valeurs foncières</strong>.</p>\n<p><button>Contacter Georges Moustaki</button></p>\n"
+        const transformedAnswer = (((questionTree.choices[0].link as Question)
+            .choices[0].link as Question).choices[0].link as Answer).content;
+        expect(transformedAnswer).toContain(
+            "<p>Réponse pour <strong>demandes valeurs foncières</strong>.</p>\n<p>Les valeurs foncières yéyé.</p>\n"
+        );
+        expect(transformedAnswer).toContain(
+            '<a class="button" href="https://www.wikipedia.com">Wikipedia</a>'
         );
     });
 });
