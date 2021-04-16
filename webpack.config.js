@@ -31,8 +31,6 @@ module.exports = {
         }),
         new PurgecssPlugin({
             paths: glob.sync(`${PATHS.views}/**/*`, { nodir: true }),
-            // Tell Purgecss to leave these selectors since they are injected at boot time in answers
-            safelist: ["justify-center", "w-full"],
             defaultExtractor: (content) => {
                 const contentWithoutStyleBlocks = content.replace(
                     /<style[^]+?<\/style>/gi,
