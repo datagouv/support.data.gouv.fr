@@ -1,0 +1,6 @@
+<h2 class="text-base font-black mt-4 mb-1">{{ level.title }}</h2>
+<div class="flex flex-wrap">
+    {% for choice in level.choices %}
+        {% include 'includes/choice.njk' %}
+    {% endfor %}
+</div>

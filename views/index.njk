@@ -7,12 +7,7 @@
     <turbo-frame id="support-tree">
         {% for level in supportFlow.levels %}
             {% set prefix %}{{ choicesPrefixes[loop.index0 - 1] }}{% endset %}
-            <h2 class="text-base font-black mt-4 mb-1">{{ level.title }}</h2>
-            <div class="flex flex-wrap">
-                {% for choice in level.choices %}
-                    {% include 'includes/choice.njk' %}
-                {% endfor %}
-            </div>
+            {% include 'includes/question.njk' %}
         {% endfor %}
         {% if supportFlow.isFullyFilled %}
             {% include 'includes/answer.njk' %}
