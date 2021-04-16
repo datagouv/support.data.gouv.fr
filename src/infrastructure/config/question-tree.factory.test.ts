@@ -16,7 +16,7 @@ describe("The question tree factory", () => {
             "<p>Réponse pour <strong>demandes valeurs foncières</strong>.</p>\n<p>Les valeurs foncières yéyé.</p>\n"
         );
         expect(transformedAnswer).toContain(
-            '<div class="w-full flex justify-center">\n    <a class="bg-blue-400 px-4 py-2 m-0.5 shadow-none rounded-md" href="https://www.wikipedia.com">Wikipedia</a>\n</div>'
+            '<div class="w-full flex justify-center">\n    <a class="bg-blue-800 px-6 py-2 m-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-shadow transition-translate rounded text-white text-lg" href="https://www.wikipedia.com">Wikipedia</a>\n</div>'
         );
     });
 });
