@@ -76,6 +76,8 @@ const transformMarkdown = (markdownContent: string): string => {
     const htmlContent = marked(markdownContent);
     return htmlContent.replace(
         /<button href="(.+)">(.+)?<\/button>/g,
-        '<div class="w-full flex justify-center"><a class="bg-blue-400 px-4 py-2 m-0.5 shadow-none rounded-md" href="$1">$2</a></div>'
+        (_, href: string, text: string) => {
+            return `<div class="w-full flex justify-center"><a class="bg-blue-400 px-4 py-2 m-0.5 shadow-none rounded-md" href="${href}">${text}</a></div>`;
+        }
     );
 };
