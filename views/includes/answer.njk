@@ -1,3 +1,4 @@
-<div class="bg-gray-100 border border-2 px-8 py-12 my-12">
-    {{ supportFlow.finalAnswer.content | safe }}
+<div class="bg-gray-100 border border-2 px-8 py-12 my-12 rounded-md relative">
+    <h3 class="absolute -top-5 left-8 bg-white px-2 py-1 rounded-md text-base font-black">Explication</h3>
+    <div>{{ supportFlow.finalAnswer.content | safe }}</div>
 </div>
