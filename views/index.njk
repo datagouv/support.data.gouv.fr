@@ -16,7 +16,7 @@
             </div>
         {% endfor %}
         {% if supportFlow.isFullyFilled %}
-            {{ supportFlow.finalAnswer.content | safe }}
+            {% include 'includes/answer.njk' %}
         {% endif %}
     </turbo-frame>
 {% endblock %}
