@@ -17,7 +17,7 @@
     "start:dev:client": "webpack --watch",
     "start:dev:server": "ts-node-dev --rs --watch 'src/**/*.ts,views/**/*.njk,config/**/*,public/dist/manifest.json' src/infrastructure",
     "start:prod": "node dist/infrastructure",
-    "test": "jest"
+    "test": "TS_NODE_TRANSPILE_ONLY=true jest --maxWorkers=1"
   },
   "repository": {
     "type": "git",
