@@ -24,13 +24,15 @@ describe("The Zammad client", () => {
         expect(client).toBeDefined();
     });
 
-    it("uses axios under the hood", async () => {
-        await client.createUser(firstname, lastname, email);
-        expect(axiosClient.post).toBeCalledWith("/users", {
-            firstname,
-            lastname,
-            email,
-            roles: ["Customer"],
+    describe("when createUser is called", () => {
+        it("uses axios under the hood", async () => {
+            await client.createUser(firstname, lastname, email);
+            expect(axiosClient.post).toBeCalledWith("/users", {
+                firstname,
+                lastname,
+                email,
+                roles: ["Customer"],
+            });
         });
     });
 });
