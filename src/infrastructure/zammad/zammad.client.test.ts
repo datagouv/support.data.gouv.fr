@@ -9,6 +9,7 @@ describe("The Zammad client", () => {
     const lastname = "Moust";
     const email = "jean@moust.fr";
     process.env.ZAMMAD_ACCESS_TOKEN = "croute";
+    process.env.ZAMMAD_BASE_URL = "https://zammad.croute/api";
 
     it("exists", () => {
         expect(client).toBeDefined();
@@ -18,7 +19,7 @@ describe("The Zammad client", () => {
         await client.createUser(firstname, lastname, email);
         expect(axios.request).toBeCalledWith({
             method: "post",
-            url: "/users",
+            url: "https://zammad.croute/api/users",
             headers: {
                 Authorization: "Bearer croute",
             },

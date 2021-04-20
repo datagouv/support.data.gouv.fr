@@ -8,7 +8,7 @@ export class ZammadClient {
     ): Promise<void> {
         await axios.request({
             method: "post",
-            url: "/users",
+            url: `${process.env.ZAMMAD_BASE_URL}/users`,
             headers: {
                 Authorization: `Bearer ${process.env.ZAMMAD_ACCESS_TOKEN}`,
             },
