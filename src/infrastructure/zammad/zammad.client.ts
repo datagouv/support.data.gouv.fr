@@ -24,8 +24,20 @@ export class ZammadClient {
     async createTicket(
         email: string,
         recipient: string,
+        title: string,
         body: string
     ): Promise<void> {
-        await axiosClient.post("/croute");
+        await axiosClient.post("/tickets", {
+            title,
+            group: recipient,
+            customer_id: `guess:${email}`,
+            article: {
+                body,
+                type: "web",
+                from: email,
+                to: recipient,
+                internal: false,
+            },
+        });
     }
 }
