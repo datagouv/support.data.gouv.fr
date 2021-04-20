@@ -9,6 +9,9 @@ export class ZammadClient {
         await axios.request({
             method: "post",
             url: "/users",
+            headers: {
+                Authorization: `Bearer ${process.env.ZAMMAD_ACCESS_TOKEN}`,
+            },
             data: {
                 firstname,
                 lastname,

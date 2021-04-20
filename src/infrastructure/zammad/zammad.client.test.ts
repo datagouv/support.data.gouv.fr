@@ -8,6 +8,7 @@ describe("The Zammad client", () => {
     const firstname = "Jean";
     const lastname = "Moust";
     const email = "jean@moust.fr";
+    process.env.ZAMMAD_ACCESS_TOKEN = "croute";
 
     it("exists", () => {
         expect(client).toBeDefined();
@@ -18,6 +19,9 @@ describe("The Zammad client", () => {
         expect(axios.request).toBeCalledWith({
             method: "post",
             url: "/users",
+            headers: {
+                Authorization: "Bearer croute",
+            },
             data: {
                 firstname,
                 lastname,
