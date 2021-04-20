@@ -15,11 +15,15 @@ describe("The Zammad client", () => {
 
     it("uses axios under the hood", async () => {
         await client.createUser(firstname, lastname, email);
-        expect(axios.post).toBeCalledWith("/users", {
-            firstname,
-            lastname,
-            email,
-            roles: ["Customer"],
+        expect(axios.request).toBeCalledWith({
+            method: "post",
+            url: "/users",
+            data: {
+                firstname,
+                lastname,
+                email,
+                roles: ["Customer"],
+            },
         });
     });
 });
