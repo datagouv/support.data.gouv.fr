@@ -27,17 +27,21 @@ export class ZammadClient {
         title: string,
         body: string
     ): Promise<void> {
-        await axiosClient.post("/tickets", {
-            title,
-            group: recipient,
-            customer_id: `guess:${email}`,
-            article: {
-                body,
-                type: "web",
-                from: email,
-                to: recipient,
-                internal: false,
+        await axiosClient.post(
+            "/tickets",
+            {
+                title,
+                group: recipient,
+                customer_id: `guess:${email}`,
+                article: {
+                    body,
+                    type: "web",
+                    from: email,
+                    to: recipient,
+                    internal: false,
+                },
             },
-        });
+            { headers: { "X-On-Behalf-Of": email } }
+        );
     }
 }

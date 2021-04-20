@@ -43,18 +43,26 @@ describe("The Zammad client", () => {
     describe("when createTicket is called", () => {
         it("posts to the tickets endpoint", async () => {
             await client.createTicket(email, recipient, title, body);
-            expect(axiosClient.post).toBeCalledWith("/tickets", {
-                title,
-                group: recipient,
-                customer_id: `guess:${email}`,
-                article: {
-                    body,
-                    type: "web",
-                    from: email,
-                    to: recipient,
-                    internal: false,
+            expect(axiosClient.post).toBeCalledWith(
+                "/tickets",
+                {
+                    title,
+                    group: recipient,
+                    customer_id: `guess:${email}`,
+                    article: {
+                        body,
+                        type: "web",
+                        from: email,
+                        to: recipient,
+                        internal: false,
+                    },
                 },
-            });
+                {
+                    headers: {
+                        "X-On-Behalf-Of": email,
+                    },
+                }
+            );
         });
     });
 });
