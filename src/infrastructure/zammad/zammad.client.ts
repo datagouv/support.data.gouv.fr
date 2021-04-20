@@ -20,4 +20,12 @@ export class ZammadClient {
             roles: ["Customer"],
         });
     }
+
+    async createTicket(
+        email: string,
+        recipient: string,
+        body: string
+    ): Promise<void> {
+        await axiosClient.post("/croute");
+    }
 }
