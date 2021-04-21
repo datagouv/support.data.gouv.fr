@@ -12,6 +12,13 @@ import {
 } from "./support-ticket.controller";
 
 describe("The support ticket controller", () => {
+    const validBody = {
+        author: "jean@moust.fr",
+        recipient: "lol@lol.com",
+        subject: "Aled",
+        body: "J'ai besoin d'aide",
+    };
+
     it("exists", () => {
         expect(createSupportTicket).toBeDefined();
     });
@@ -19,21 +26,15 @@ describe("The support ticket controller", () => {
     it("has a request validation function", () => {
         expect(
             validateRequest({
-                author: "jean@moust.fr",
+                ...validBody,
                 recipient: "lol",
-                subject: "Aled",
-                body: "J'ai besoin d'aide",
             })
         ).rejects.toThrow("recipient must be a valid email");
     });
 
     it("renders validation errors", async () => {
         const req = {
-            body: {
-                author: "jean@moust.fr",
-                recipient: "lol",
-                body: "J'ai besoin d'aide",
-            },
+            body: { ...validBody, subject: undefined },
         } as Request;
         const res = ({
             render: jest.fn(),
@@ -48,16 +49,11 @@ describe("The support ticket controller", () => {
 
     it("renders a success when input is correct and ticket is created", async () => {
         const req = {
-            body: {
-                author: "jean@moust.fr",
-                recipient: "lol@lol.com",
-                subject: "Aled",
-                body: "J'ai besoin d'aide",
-            },
+            body: validBody,
         } as Request;
         const res = ({
             render: jest.fn(),
-        } as unknown) as Response & jest.Mocked<Response>;
+        } as unknown) as Response;
         useCaseMock.mockResolvedValue(undefined);
 
         await createSupportTicket(req, res);
@@ -67,16 +63,11 @@ describe("The support ticket controller", () => {
 
     it("renders an error when input is correct ticket creation fails", async () => {
         const req = {
-            body: {
-                author: "jean@moust.fr",
-                recipient: "lol@lol.com",
-                subject: "Aled",
-                body: "J'ai besoin d'aide",
-            },
+            body: validBody,
         } as Request;
         const res = ({
             render: jest.fn(),
-        } as unknown) as Response & jest.Mocked<Response>;
+        } as unknown) as Response;
         useCaseMock.mockRejectedValue(undefined);
 
         await createSupportTicket(req, res);
