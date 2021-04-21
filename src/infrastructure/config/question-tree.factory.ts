@@ -79,7 +79,6 @@ const transformMarkdown = (markdownContent: string): string => {
         /<button href="(.+)">(.+)?<\/button>/g,
         (_, href: string, text: string) => {
             return render("views/includes/answer-button.njk", { href, text });
-            return `<div class="w-full flex justify-center"><a class="bg-blue-400 px-4 py-2 m-0.5 shadow-none rounded-md" href="${href}">${text}</a></div>`;
         }
     );
 };
