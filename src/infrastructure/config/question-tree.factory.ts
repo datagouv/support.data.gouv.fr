@@ -15,7 +15,11 @@ import { checkRawQuestionTreeType } from "./raw-question-tree.guard";
 
 export type RawChoice = {
     label: string;
-    link: { content: string } | { path: string } | RawQuestionTree;
+    link:
+        | { content: string }
+        | { path: string }
+        | { form: { title: string } }
+        | RawQuestionTree;
 };
 
 export type RawQuestionTree = {
@@ -57,7 +61,11 @@ const refineRawQuestion = (
 };
 
 const refineRawLink = (
-    rawLink: { content: string } | { path: string } | RawQuestionTree,
+    rawLink:
+        | { content: string }
+        | { path: string }
+        | { form: { title: string } }
+        | RawQuestionTree,
     basePath: string
 ): Answer | Question => {
     if ("content" in rawLink) {
@@ -69,6 +77,9 @@ const refineRawLink = (
                 fs.readFileSync(basePath + "/" + rawLink.path, "utf-8")
             ),
         };
+    }
+    if ("form" in rawLink) {
+        return rawLink;
     }
     return refineRawQuestion(rawLink, basePath);
 };
