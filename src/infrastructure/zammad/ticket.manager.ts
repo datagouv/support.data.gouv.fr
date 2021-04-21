@@ -6,6 +6,11 @@ export class ZammadTicketManager implements TicketManager {
     constructor(private readonly zammadClient: ZammadClient) {}
 
     createTicket(createTicket: CreateTicketDTO): Promise<void> {
-        throw new Error("Method not implemented.");
+        return this.zammadClient.createTicket(
+            createTicket.author,
+            createTicket.recipient,
+            createTicket.subject,
+            createTicket.body
+        );
     }
 }
