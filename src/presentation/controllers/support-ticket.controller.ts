@@ -6,3 +6,5 @@ export const createSupportTicket = async (
 ): Promise<void> => {
     // To fill
 };
+
+export const validateRequest = (req: Request) => {};
