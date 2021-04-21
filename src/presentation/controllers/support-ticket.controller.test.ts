@@ -1,3 +1,4 @@
+import { ValidationError } from "yup";
 import {
     createSupportTicket,
     validateRequest,
@@ -9,6 +10,13 @@ describe("The support ticket controller", () => {
     });
 
     it("has a request validation function", () => {
-        expect(validateRequest).toBeDefined();
+        expect(
+            validateRequest({
+                author: "jean@moust.fr",
+                recipient: "lol",
+                subject: "Aled",
+                body: "J'ai besoin d'aide",
+            })
+        ).rejects.toThrow("recipient must be a valid email");
     });
 });
