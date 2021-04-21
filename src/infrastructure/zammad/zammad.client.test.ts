@@ -5,8 +5,6 @@ import { axiosClient, ZammadClient } from "./zammad.client";
 
 describe("The Zammad client", () => {
     const client = new ZammadClient();
-    const firstname = "Jean";
-    const lastname = "Moust";
     const email = "jean@moust.fr";
     const recipient = "aled@led.fr";
     const subject = "aled";
@@ -26,18 +24,6 @@ describe("The Zammad client", () => {
 
     it("exists", () => {
         expect(client).toBeDefined();
-    });
-
-    describe("when createUser is called", () => {
-        it("uses axios under the hood", async () => {
-            await client.createUser(firstname, lastname, email);
-            expect(axiosClient.post).toBeCalledWith("/users", {
-                firstname,
-                lastname,
-                email,
-                roles: ["Customer"],
-            });
-        });
     });
 
     describe("when createTicket is called", () => {

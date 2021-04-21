@@ -8,19 +8,6 @@ export const axiosClient = axios.create({
 });
 
 export class ZammadClient {
-    async createUser(
-        firstname: string,
-        lastname: string,
-        email: string
-    ): Promise<void> {
-        await axiosClient.post("/users", {
-            firstname,
-            lastname,
-            email,
-            roles: ["Customer"],
-        });
-    }
-
     async createTicket(
         email: string,
         recipient: string,
