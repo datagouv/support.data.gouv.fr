@@ -8,28 +8,28 @@ export const createSupportTicket = async (
     req: Request,
     res: Response
 ): Promise<void> => {
+    let error = undefined;
     try {
         const dto = await validateRequest(req.body);
         await createSupportTicketUseCase(dto, ticketManager);
-        res.render("frames/form.njk");
     } catch (err) {
-        if (!(err instanceof ValidationError)) {
-            res.render("frames/form.njk", {
-                error: "Impossible de soumettre votre demande.",
-            });
-            return;
+        if (err instanceof ValidationError) {
+            error = err;
+        } else {
+            error = "Impossible de soumettre votre demande.";
         }
-        res.render("frames/form.njk", err);
+    } finally {
+        res.render("frames/form.njk", error ? { error } : {});
     }
 };
 
-export const validateRequest = (body: unknown): Promise<CreateTicketDTO> => {
-    const createSupportTicketSchema: SchemaOf<CreateTicketDTO> = object({
-        author: string().defined().required().email(),
-        recipient: string().defined().required().email(),
-        subject: string().required().defined(),
-        body: string().required().defined(),
-    });
+const createSupportTicketSchema: SchemaOf<CreateTicketDTO> = object({
+    author: string().defined().required().email(),
+    recipient: string().defined().required().email(),
+    subject: string().required().defined(),
+    body: string().required().defined(),
+});
 
+export const validateRequest = (body: unknown): Promise<CreateTicketDTO> => {
     return createSupportTicketSchema.validate(body, { abortEarly: false });
 };

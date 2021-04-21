@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { ValidationError } from "yup";
 
 const useCaseMock = jest.fn();
 jest.mock("../../application/usecases/create-support-ticket.usecase", () => ({
@@ -44,7 +43,12 @@ describe("The support ticket controller", () => {
 
         expect(res.render).toHaveBeenCalledTimes(1);
         expect(res.render.mock.calls[0][0]).toEqual("frames/form.njk");
-        expect(res.render.mock.calls[0][1]).toBeInstanceOf(ValidationError);
+        expect(res.render.mock.calls[0][1]).toHaveProperty("error");
+        expect(res.render.mock.calls[0][1]).toMatchObject({
+            error: {
+                message: "2 errors occurred",
+            },
+        });
     });
 
     it("renders a success when input is correct and ticket is created", async () => {
@@ -58,7 +62,7 @@ describe("The support ticket controller", () => {
 
         await createSupportTicket(req, res);
 
-        expect(res.render).toHaveBeenCalledWith("frames/form.njk");
+        expect(res.render).toHaveBeenCalledWith("frames/form.njk", {});
     });
 
     it("renders an error when input is correct ticket creation fails", async () => {
