@@ -14,7 +14,10 @@ export const createSupportTicket = async (
         res.render("frames/form.njk");
     } catch (err) {
         if (!(err instanceof ValidationError)) {
-            throw err;
+            res.render("frames/form.njk", {
+                error: "Impossible de soumettre votre demande.",
+            });
+            return;
         }
         res.render("frames/form.njk", err);
     }

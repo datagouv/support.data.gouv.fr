@@ -64,4 +64,26 @@ describe("The support ticket controller", () => {
 
         expect(res.render).toHaveBeenCalledWith("frames/form.njk");
     });
+
+    it("renders an error when input is correct ticket creation fails", async () => {
+        const req = {
+            body: {
+                author: "jean@moust.fr",
+                recipient: "lol@lol.com",
+                subject: "Aled",
+                body: "J'ai besoin d'aide",
+            },
+        } as Request;
+        const res = ({
+            render: jest.fn(),
+        } as unknown) as Response & jest.Mocked<Response>;
+        useCaseMock.mockRejectedValue(undefined);
+
+        await createSupportTicket(req, res);
+
+        expect(res.render).toHaveBeenCalledTimes(1);
+        expect(res.render).toHaveBeenCalledWith("frames/form.njk", {
+            error: "Impossible de soumettre votre demande.",
+        });
+    });
 });
