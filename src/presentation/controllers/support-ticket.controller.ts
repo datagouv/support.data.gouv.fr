@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import { SchemaOf, object, string, ValidationError } from "yup";
+import { createSupportTicketUseCase } from "../../application/usecases/create-support-ticket.usecase";
 import { CreateTicketDTO } from "../../domain/ticketing/create-ticket.dto";
+import { ticketManager } from "../../infrastructure/server/container";
 
 export const createSupportTicket = async (
     req: Request,
@@ -8,6 +10,8 @@ export const createSupportTicket = async (
 ): Promise<void> => {
     try {
         const dto = await validateRequest(req.body);
+        await createSupportTicketUseCase(dto, ticketManager);
+        res.render("frames/form.njk");
     } catch (err) {
         if (!(err instanceof ValidationError)) {
             throw err;
