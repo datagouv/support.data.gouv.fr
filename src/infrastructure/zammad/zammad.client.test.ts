@@ -9,7 +9,7 @@ describe("The Zammad client", () => {
     const lastname = "Moust";
     const email = "jean@moust.fr";
     const recipient = "aled@led.fr";
-    const title = "aled";
+    const subject = "aled";
     const body = "J'ai grandement besoin d'aide";
 
     axiosClient.post = jest.fn();
@@ -42,11 +42,11 @@ describe("The Zammad client", () => {
 
     describe("when createTicket is called", () => {
         it("posts to the tickets endpoint", async () => {
-            await client.createTicket(email, recipient, title, body);
+            await client.createTicket(email, recipient, subject, body);
             expect(axiosClient.post).toBeCalledWith(
                 "/tickets",
                 {
-                    title,
+                    title: subject,
                     group: recipient,
                     customer_id: `guess:${email}`,
                     article: {

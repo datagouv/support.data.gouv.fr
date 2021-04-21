@@ -24,13 +24,13 @@ export class ZammadClient {
     async createTicket(
         email: string,
         recipient: string,
-        title: string,
+        subject: string,
         body: string
     ): Promise<void> {
         await axiosClient.post(
             "/tickets",
             {
-                title,
+                title: subject,
                 group: recipient,
                 customer_id: `guess:${email}`,
                 article: {
