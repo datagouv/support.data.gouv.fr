@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { SchemaOf, object, string } from "yup";
+import { SchemaOf, object, string, ValidationError } from "yup";
 import { CreateTicketDTO } from "../../domain/ticketing/create-ticket.dto";
 
 export const createSupportTicket = async (
@@ -9,7 +9,7 @@ export const createSupportTicket = async (
     // To fill
 };
 
-export const validateRequest = (body: unknown) => {
+export const validateRequest = (body: unknown): Promise<CreateTicketDTO> => {
     const createSupportTicketSchema: SchemaOf<CreateTicketDTO> = object({
         author: string().defined().required().email(),
         recipient: string().defined().required().email(),
@@ -17,5 +17,5 @@ export const validateRequest = (body: unknown) => {
         body: string().required().defined(),
     });
 
-    return createSupportTicketSchema.validate(body);
+    return createSupportTicketSchema.validate(body, { abortEarly: false });
 };
