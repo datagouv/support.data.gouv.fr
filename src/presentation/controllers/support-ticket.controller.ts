@@ -6,7 +6,14 @@ export const createSupportTicket = async (
     req: Request,
     res: Response
 ): Promise<void> => {
-    // To fill
+    try {
+        const dto = await validateRequest(req.body);
+    } catch (err) {
+        if (!(err instanceof ValidationError)) {
+            throw err;
+        }
+        res.render("frames/form.njk", err);
+    }
 };
 
 export const validateRequest = (body: unknown): Promise<CreateTicketDTO> => {
