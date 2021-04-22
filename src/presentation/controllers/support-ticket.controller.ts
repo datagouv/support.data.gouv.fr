@@ -8,6 +8,11 @@ export const createSupportTicket = async (
     req: Request,
     res: Response
 ): Promise<void> => {
+    if (req.body.name !== "") {
+        res.redirect(303, "/");
+        return;
+    }
+
     let error = undefined;
     try {
         const dto = await validateRequest(req.body);

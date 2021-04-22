@@ -16,6 +16,7 @@ describe("The support ticket controller", () => {
         recipient: "lol@lol.com",
         subject: "Aled",
         body: "J'ai besoin d'aide",
+        name: "",
     };
 
     it("exists", () => {
@@ -85,7 +86,20 @@ describe("The support ticket controller", () => {
         expect(res.render).toHaveBeenCalledTimes(1);
         expect(res.render).toHaveBeenCalledWith("frames/form.njk", {
             error: "Impossible de soumettre votre demande.",
-            userInput: validBody
+            userInput: validBody,
         });
+    });
+
+    it("handles bots trap", async () => {
+        const req = {
+            body: { ...validBody, name: "Boty MacBotname" },
+        } as Request;
+        const res = ({
+            redirect: jest.fn(),
+        } as unknown) as Response & jest.Mocked<Response>;
+
+        await createSupportTicket(req, res);
+
+        expect(res.redirect).toHaveBeenCalledWith(303, "/");
     });
 });
