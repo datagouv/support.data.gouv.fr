@@ -14,6 +14,7 @@ export const createSupportTicket = async (
         await createSupportTicketUseCase(dto, ticketManager);
     } catch (err) {
         if (err instanceof ValidationError) {
+            res.status(422);
             error = err;
         } else {
             error = "Impossible de soumettre votre demande.";

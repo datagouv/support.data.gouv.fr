@@ -37,10 +37,12 @@ describe("The support ticket controller", () => {
         } as Request;
         const res = ({
             render: jest.fn(),
+            status: jest.fn(),
         } as unknown) as Response & jest.Mocked<Response>;
 
         await createSupportTicket(req, res);
 
+        expect(res.status).toHaveBeenCalledWith(422);
         expect(res.render).toHaveBeenCalledTimes(1);
         expect(res.render.mock.calls[0][0]).toEqual("frames/form.njk");
         expect(res.render.mock.calls[0][1]).toHaveProperty("error");
