@@ -7,7 +7,7 @@
     <div class="border-solid border-gray-200 border-2 px-8 py-12 my-12 rounded-md relative">
         <h3 class="bg-white absolute -top-5 left-8 px-2 py-1 rounded-md text-base font-black">{{ supportFlow.finalAnswer.form.title }}</h3>
         <turbo-frame id="form">
-            {% set recipient = "test@data.gouv.fr " %}
+            {% set recipient = "test@data.gouv.fr" %}
             {% include 'frames/form.njk' %}
         </turbo-frame>
     </div>

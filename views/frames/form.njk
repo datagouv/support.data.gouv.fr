@@ -30,6 +30,7 @@
             <label class="fr-label hidden" for="name">Votre nom d'humain</label>
             <input class="fr-input hidden" type="text" id="name" name="name"/>
         </div>
+        <input class="fr-input hidden" type="text" name="recipient" value="{{ recipient | default(userInput.recipient) }}"/>
         <div class="w-full flex justify-center">
             <button class="bg-blue-800 px-6 py-2 m-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-shadow transition-translate rounded text-white text-lg" type="submit">Envoyer</button>
         </div>
