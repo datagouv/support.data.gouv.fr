@@ -72,12 +72,14 @@ describe("The support ticket controller", () => {
             body: validBody,
         } as Request;
         const res = ({
+            status: jest.fn(),
             render: jest.fn(),
         } as unknown) as Response;
         useCaseMock.mockRejectedValue(undefined);
 
         await createSupportTicket(req, res);
 
+        expect(res.status).toHaveBeenCalledWith(502);
         expect(res.render).toHaveBeenCalledTimes(1);
         expect(res.render).toHaveBeenCalledWith("frames/form.njk", {
             error: "Impossible de soumettre votre demande.",

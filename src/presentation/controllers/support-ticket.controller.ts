@@ -17,6 +17,7 @@ export const createSupportTicket = async (
             res.status(422);
             error = err;
         } else {
+            res.status(502);
             error = "Impossible de soumettre votre demande.";
         }
     } finally {
