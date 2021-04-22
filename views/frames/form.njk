@@ -7,10 +7,13 @@
 {%- endmacro %}
 <turbo-frame id="form">
     <form action="/tickets" method="POST">
-        <div class="fr-input-group {%- if fieldIsInError('author') != '' %} fr-input-group--error{% endif %}">
+        {% set authorInError = fieldIsInError('author') != '' %}
+        {% set subjectInError = fieldIsInError('subject') != '' %}
+        {% set bodyInError = fieldIsInError('body') != '' %}
+        <div class="fr-input-group {%- if authorInError %} fr-input-group--error{% endif %}">
             <label class="fr-label" for="author">Votre adresse email</label>
-            <input class="fr-input {%- if fieldIsInError('author') != '' %} fr-input--error{% endif %}" type="text" id="author" name="author"/>
-            {% if fieldIsInError('author') != '' %}
+            <input class="fr-input {%- if authorInError %} fr-input--error{% endif %}" type="text" id="author" name="author"/>
+            {% if authorInError %}
                 <p class="fr-error-text">
                     Veuillez saisir une adresse email valide.
                 </p>
