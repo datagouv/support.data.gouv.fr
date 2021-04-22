@@ -1,11 +1,24 @@
+{% macro markError(fieldName, errors=[]) -%}
+    {% for error in errors -%}
+        {% if error.path == fieldName -%}
+            {{ ' fr-input-group--error' }}
+        {%- endif %}
+    {%- endfor %}
+{%- endmacro %}
 <turbo-frame id="form">
     <form action="/tickets" method="POST">
-        <label class="fr-label" for="email">Votre adresse email</label>
-        <input class="fr-input" type="text" id="email" name="email"/>
-        <label class="fr-label mt-4" for="subject">L'objet de votre message</label>
-        <input class="fr-input" type="text" id="subject" name="subject"/>
-        <label class="fr-label mt-4" for="body">Votre question</label>
-        <textarea class="fr-input" type="text" id="body" name="body"></textarea>
+        <div class="fr-input-group {{ markError('author', error.inner) }}">
+            <label class="fr-label" for="author">Votre adresse email</label>
+            <input class="fr-input" type="text" id="author" name="author"/>
+        </div>
+        <div class="fr-input-group {{ markError('subject', error.inner) }}">
+            <label class="fr-label mt-4" for="subject">L'objet de votre message</label>
+            <input class="fr-input" type="text" id="subject" name="subject"/>
+        </div>
+        <div class="fr-input-group {{ markError('body', error.inner) }}">
+            <label class="fr-label mt-4" for="body">Votre question</label>
+            <textarea class="fr-input" type="text" id="body" name="body"></textarea>
+        </div>
         <div class="w-full flex justify-center">
             <button class="bg-blue-800 px-6 py-2 m-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-shadow transition-translate rounded text-white text-lg" type="submit">Envoyer</button>
         </div>
