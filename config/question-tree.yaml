@@ -42,3 +42,8 @@ choices:
         content: >
           Pour toute question ou problème relatifs à l'utilisation du portail, en tant qu'utilisateur ou en tant que producteur, nous vous invitions à consulter la documentation. Si vous n'y trouver pas une réponse à votre question, vous pouvez nous écrire à l'adresse : support@data.gouv.fr<br>
           CTA : Voir la documentation technique
+
+    - label: Je veux tester les formulaires
+      link:
+        form:
+          title: Le titre
