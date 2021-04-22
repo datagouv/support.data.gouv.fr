@@ -5,28 +5,23 @@
         {%- endif %}
     {%- endfor %}
 {%- endmacro %}
+{% macro renderField(fieldName, label, errorMessage, tag='input') %}
+    {% set fieldInError = fieldIsInError(fieldName) != '' %}
+    <div class="fr-input-group {%- if fieldInError %} fr-input-group--error{% endif %}">
+        <label class="fr-label" for="{{ fieldName }}">{{ label }}</label>
+        <{{ tag }} class="fr-input {%- if fieldInError %} fr-input--error{% endif %}" type="text" id="{{ fieldName }}" name="{{ fieldName }}"></{{ tag }}>
+        {% if fieldInError %}
+            <p class="fr-error-text">
+                {{ errorMessage }}
+            </p>
+        {% endif %}
+    </div>
+{% endmacro %}
 <turbo-frame id="form">
     <form action="/tickets" method="POST">
-        {% set authorInError = fieldIsInError('author') != '' %}
-        {% set subjectInError = fieldIsInError('subject') != '' %}
-        {% set bodyInError = fieldIsInError('body') != '' %}
-        <div class="fr-input-group {%- if authorInError %} fr-input-group--error{% endif %}">
-            <label class="fr-label" for="author">Votre adresse email</label>
-            <input class="fr-input {%- if authorInError %} fr-input--error{% endif %}" type="text" id="author" name="author"/>
-            {% if authorInError %}
-                <p class="fr-error-text">
-                    Veuillez saisir une adresse email valide.
-                </p>
-            {% endif %}
-        </div>
-        <div class="fr-input-group" {%- if fieldIsInError('subject') != '' %} fr-input-group--error {% endif %}>
-            <label class="fr-label mt-4" for="subject">L'objet de votre message</label>
-            <input class="fr-input" type="text" id="subject" name="subject"/>
-        </div>
-        <div class="fr-input-group" {%- if fieldIsInError('body') != '' %} fr-input-group--error {% endif %}>
-            <label class="fr-label mt-4" for="body">Votre question</label>
-            <textarea class="fr-input" type="text" id="body" name="body"></textarea>
-        </div>
+        {{ renderField('author', 'Votre adresse email', 'Veuillez renseigner une adresse email valide.') }}
+        {{ renderField('subject', "L'objet de votre question", 'Veuillez renseigner un object pour votre question.') }}
+        {{ renderField('body', 'Votre question', 'Veuillez remplir votre question.', 'textarea') }}
         <div class="w-full flex justify-center">
             <button class="bg-blue-800 px-6 py-2 m-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-shadow transition-translate rounded text-white text-lg" type="submit">Envoyer</button>
         </div>
