@@ -64,7 +64,9 @@ describe("The support ticket controller", () => {
 
         await createSupportTicket(req, res);
 
-        expect(res.render).toHaveBeenCalledWith("frames/form.njk", {});
+        expect(res.render).toHaveBeenCalledWith("frames/form.njk", {
+            userInput: validBody,
+        });
     });
 
     it("renders an error when input is correct ticket creation fails", async () => {
@@ -83,6 +85,7 @@ describe("The support ticket controller", () => {
         expect(res.render).toHaveBeenCalledTimes(1);
         expect(res.render).toHaveBeenCalledWith("frames/form.njk", {
             error: "Impossible de soumettre votre demande.",
+            userInput: validBody
         });
     });
 });

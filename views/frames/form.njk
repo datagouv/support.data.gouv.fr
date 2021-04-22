@@ -9,7 +9,11 @@
     {% set fieldInError = fieldIsInError(fieldName) != '' %}
     <div class="fr-input-group {%- if fieldInError %} fr-input-group--error{% endif %}">
         <label class="fr-label" for="{{ fieldName }}">{{ label }}</label>
-        <{{ tag }} class="fr-input {%- if fieldInError %} fr-input--error{% endif %}" type="text" id="{{ fieldName }}" name="{{ fieldName }}"></{{ tag }}>
+        <{{ tag }} class="fr-input {%- if fieldInError %} fr-input--error{% endif %}" type="text" id="{{ fieldName }}" name="{{ fieldName }}" {%- if tag == 'input' %} value="{{ userInput[fieldName] }}" {%- endif %}>
+            {%- if tag == "textarea" -%}
+                {{ userInput[fieldName] }}
+            {%- endif -%}
+        </{{ tag }}>
         {% if fieldInError %}
             <p class="fr-error-text">
                 {{ errorMessage }}

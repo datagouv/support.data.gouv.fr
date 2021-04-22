@@ -21,7 +21,8 @@ export const createSupportTicket = async (
             error = "Impossible de soumettre votre demande.";
         }
     } finally {
-        res.render("frames/form.njk", error ? { error } : {});
+        const userInput = req.body;
+        res.render("frames/form.njk", { userInput, error });
     }
 };
 
