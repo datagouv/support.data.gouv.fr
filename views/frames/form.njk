@@ -15,7 +15,7 @@
         {% endif %}
     </div>
 {% endmacro %}
-<turbo-frame id="form">
+<turbo-frame id="form" data-controller="form" data-form-next-value="/merci" data-action="turbo:submit-end->form#next">
     <form action="/tickets" method="POST">
         {{ renderField('author', 'Votre adresse email', 'Veuillez renseigner une adresse email valide.') }}
         {{ renderField('subject', "L'objet de votre question", 'Veuillez renseigner un object pour votre question.') }}
