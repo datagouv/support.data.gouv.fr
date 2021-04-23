@@ -10,6 +10,11 @@ choices:
         form:
           title: Contactez-nous
           recipient: test@data.gouv.fr
+    - label: Je veux tester le formulaire de contact quand Zammad ne marche pas
+      link:
+        form:
+          title: Contactez-nous (mais ça ne va pas marcher hihi)
+          recipient: croute@data.gouv.fr
     - label: Je veux tester une sous-question
       link:
         title: 'Vous voulez tester :'
