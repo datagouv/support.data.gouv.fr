@@ -14,10 +14,14 @@ export class ZammadClient {
         subject: string,
         body: string
     ): Promise<void> {
-        await axiosClient.post("/users", {
-            email,
-            roles: ["Customer"],
-        });
+        try {
+            await axiosClient.post("/users", {
+                email,
+                roles: ["Customer"],
+            });
+        } catch (error) {
+            // no-op
+        }
         await axiosClient.post(
             "/tickets",
             {
