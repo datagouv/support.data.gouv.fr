@@ -22,13 +22,17 @@ export class ZammadClient {
                 customer_id: `guess:${email}`,
                 article: {
                     body,
-                    type: "web",
                     from: email,
                     to: recipient,
+                    type: "web",
                     internal: false,
                 },
             },
-            { headers: { "X-On-Behalf-Of": email } }
+            {
+                headers: {
+                    "X-On-Behalf-Of": email,
+                },
+            }
         );
     }
 }
