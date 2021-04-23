@@ -15,7 +15,11 @@ import { checkRawQuestionTreeType } from "./raw-question-tree.guard";
 
 export type RawChoice = {
     label: string;
-    link: { content: string } | { path: string } | RawQuestionTree;
+    link:
+        | { content: string }
+        | { path: string }
+        | { form: { title: string; recipient: string } }
+        | RawQuestionTree;
 };
 
 export type RawQuestionTree = {
@@ -57,7 +61,11 @@ const refineRawQuestion = (
 };
 
 const refineRawLink = (
-    rawLink: { content: string } | { path: string } | RawQuestionTree,
+    rawLink:
+        | { content: string }
+        | { path: string }
+        | { form: { title: string; recipient: string } }
+        | RawQuestionTree,
     basePath: string
 ): Answer | Question => {
     if ("content" in rawLink) {
@@ -70,6 +78,9 @@ const refineRawLink = (
             ),
         };
     }
+    if ("form" in rawLink) {
+        return rawLink;
+    }
     return refineRawQuestion(rawLink, basePath);
 };
 
@@ -79,7 +90,6 @@ const transformMarkdown = (markdownContent: string): string => {
         /<button href="(.+)">(.+)?<\/button>/g,
         (_, href: string, text: string) => {
             return render("views/includes/answer-button.njk", { href, text });
-            return `<div class="w-full flex justify-center"><a class="bg-blue-400 px-4 py-2 m-0.5 shadow-none rounded-md" href="${href}">${text}</a></div>`;
         }
     );
 };

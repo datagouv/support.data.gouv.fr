@@ -1,8 +1,10 @@
 import { Brand } from "./branded-types";
 
-export type Answer = {
-    content: string;
-};
+export type Answer =
+    | {
+          content: string;
+      }
+    | { form: { title: string; recipient: string } };
 
 export type ChoiceId = Brand<string, "ChoiceId">;
 

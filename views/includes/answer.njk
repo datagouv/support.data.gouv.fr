@@ -1,4 +1,12 @@
-<div class="bg-gray-100 border border-2 px-8 py-12 my-12 rounded-md relative">
-    <h3 class="absolute -top-5 left-8 bg-white px-2 py-1 rounded-md text-base font-black">Explication</h3>
-    <div class="reset">{{ supportFlow.finalAnswer.content | safe }}</div>
-</div>
+{% if supportFlow.finalAnswer.content %}
+    <div class="bg-gray-100 border border-2 px-8 py-12 my-12 rounded-md relative">
+        <h3 class="absolute -top-5 left-8 bg-white px-2 py-1 rounded-md text-base font-black">Explication</h3>
+        <div class="reset">{{ supportFlow.finalAnswer.content | safe }}</div>
+    </div>
+{% else %}
+    <div class="border-solid border-gray-200 border-2 px-8 py-12 my-12 rounded-md relative">
+        <h3 class="bg-white absolute -top-5 left-8 px-2 py-1 rounded-md text-base font-black">{{ supportFlow.finalAnswer.form.title }}</h3>
+        {% set recipient = supportFlow.finalAnswer.form.recipient %}
+        {% include 'frames/form.njk' %}
+    </div>
+{% endif %}

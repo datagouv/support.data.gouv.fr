@@ -1,44 +1,27 @@
 ---
 title: Qui êtes-vous ?
 choices:
-- label: Un particulier
+- label: Un testeur de cet outil de support
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
-    - label: J'ai une question relative à des données à caractère personnel
+    - label: Je veux tester le formulaire de contact
       link:
-        title: 'Votre question concerne :'
+        form:
+          title: Contactez-nous
+          recipient: test@data.gouv.fr
+    - label: Je veux tester le formulaire de contact quand Zammad ne marche pas
+      link:
+        form:
+          title: Contactez-nous (mais ça ne va pas marcher hihi)
+          recipient: croute@data.gouv.fr
+    - label: Je veux tester une sous-question
+      link:
+        title: 'Vous voulez tester :'
         choices:
-        - label: La base de données des demandes de valeurs foncières (transactions
-            immobilières)
+        - label: Du contenu en markdown
           link:
-            path: answers/demandes-valeurs-foncieres.md
-        - label: Le Repertoire national des associations (RNA)
+            path: answers/contenu.md
+        - label: Du contenu brut
           link:
-            content: TBD
-        - label: La base Sirene des entreprises et de leurs établissements (SIREN,
-            SIRET)
-          link:
-            content: TBD
-        - label: Le fichier des personnes décédées
-          link:
-            content: TBD
-    - label: J'ai une question sur une procédure administrative
-      link:
-        content: >
-          Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. Vous pouvez vous référer au site Service-Public.fr le cas échéant.<br>
-          CTA : service-public.fr
-    - label: J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr
-      link:
-        content: >
-          Si vous avez constaté une erreur sur un jeu de donnée ou si vous avez une question relative à celui-ci vous pouvez vous adresser directement au producteur des données dans l'espace de discussion dédié.<br>
-          Celui-ci se situe en bas de page de chaque jeux de données. Voir un exemple.<br>
-          En effet l'équipe de data.gouv.fr n'est pas à l'origine des données publiées sur la plateforme. Ce sont les producteurs des données qui sont à même de répondre.
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
-      link:
-        path: answers/demandes-ouverture.md
-    - label: J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr
-      link:
-        content: >
-          Pour toute question ou problème relatifs à l'utilisation du portail, en tant qu'utilisateur ou en tant que producteur, nous vous invitions à consulter la documentation. Si vous n'y trouver pas une réponse à votre question, vous pouvez nous écrire à l'adresse : support@data.gouv.fr<br>
-          CTA : Voir la documentation technique
+            content: Le contenu brut se configure directement dans le fichier config/question-tree.yaml

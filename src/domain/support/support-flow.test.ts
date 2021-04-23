@@ -71,5 +71,14 @@ describe("Support flow", () => {
             expect(answerFlow.levels[1].choices[0].selected).toBeTruthy();
             expect(answerFlow.finalAnswer).toEqual(answerLevel2);
         });
+
+        it("has a flag for fully filled support flow", () => {
+            const userChoices: UserChoices = [
+                "choice1_1" as ChoiceId,
+                "choice2_1" as ChoiceId,
+            ];
+            const answerFlow = new SupportFlow(questionTree, userChoices);
+            expect(answerFlow.isFullyFilled).toBeTruthy();
+        });
     });
 });

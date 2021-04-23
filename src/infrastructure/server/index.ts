@@ -12,6 +12,11 @@ nunjucks.configure("views", {
 
 export const init = (): void => {
     app.use(express.static("public"));
+    app.use(
+        express.urlencoded({
+            extended: true,
+        })
+    );
     app.use((_, res, next) => {
         res.locals.mainJs = manifest["main.js"];
         res.locals.mainCss = manifest["main.css"];

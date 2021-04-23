@@ -1,0 +1,7 @@
+{% macro fieldIsInError(fieldName, errors) -%}
+    {% for error in errors -%}
+        {% if error.path == fieldName -%}
+            {{ 'yes' }}
+        {%- endif %}
+    {%- endfor %}
+{%- endmacro %}

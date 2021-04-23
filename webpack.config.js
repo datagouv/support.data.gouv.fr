@@ -69,6 +69,7 @@ module.exports = {
         ],
     },
     resolve: {
+        extensions: [".js", ".ts"],
         symlinks: false,
     },
 };
