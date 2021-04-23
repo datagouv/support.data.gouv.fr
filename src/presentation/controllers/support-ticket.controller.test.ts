@@ -59,15 +59,13 @@ describe("The support ticket controller", () => {
             body: validBody,
         } as Request;
         const res = ({
-            render: jest.fn(),
+            redirect: jest.fn(),
         } as unknown) as Response;
         useCaseMock.mockResolvedValue(undefined);
 
         await createSupportTicket(req, res);
 
-        expect(res.render).toHaveBeenCalledWith("frames/form.njk", {
-            userInput: validBody,
-        });
+        expect(res.redirect).toHaveBeenCalledWith(303, "/merci");
     });
 
     it("renders an error when input is correct ticket creation fails", async () => {

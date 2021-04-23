@@ -13,6 +13,7 @@ export const createSupportTicket = async (
         return;
     }
 
+    const userInput = req.body;
     let error = undefined;
     try {
         const dto = await validateRequest(req.body);
@@ -21,14 +22,16 @@ export const createSupportTicket = async (
         if (err instanceof ValidationError) {
             res.status(422);
             error = err;
+            res.render("frames/form.njk", { userInput, error });
+            return;
         } else {
             res.status(502);
             error = "Impossible de soumettre votre demande.";
+            res.render("frames/form.njk", { userInput, error });
+            return;
         }
-    } finally {
-        const userInput = req.body;
-        res.render("frames/form.njk", { userInput, error });
     }
+    res.redirect(303, "/merci");
 };
 
 const createSupportTicketSchema: SchemaOf<CreateTicketDTO> = object({
