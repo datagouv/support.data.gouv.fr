@@ -29,8 +29,12 @@ describe("The Zammad client", () => {
     describe("when createTicket is called", () => {
         it("posts to the tickets endpoint", async () => {
             await client.createTicket(email, recipient, subject, body);
+            expect(axiosClient.post).toHaveBeenNthCalledWith(1, "/users", {
+                email,
+                roles: ["Customer"],
+            });
             expect(axiosClient.post).toHaveBeenNthCalledWith(
-                1,
+                2,
                 "/tickets",
                 {
                     title: subject,

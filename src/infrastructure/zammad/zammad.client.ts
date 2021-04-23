@@ -14,6 +14,10 @@ export class ZammadClient {
         subject: string,
         body: string
     ): Promise<void> {
+        await axiosClient.post("/users", {
+            email,
+            roles: ["Customer"],
+        });
         await axiosClient.post(
             "/tickets",
             {
