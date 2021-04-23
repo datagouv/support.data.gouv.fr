@@ -1,12 +1,6 @@
-{% macro fieldIsInError(fieldName) -%}
-    {% for error in error.inner -%}
-        {% if error.path == fieldName -%}
-            {{ 'yes' }}
-        {%- endif %}
-    {%- endfor %}
-{%- endmacro %}
+{% from 'macros/form.njk' import fieldIsInError %}
 {% macro renderField(fieldName, label, errorMessage, tag='input') %}
-    {% set fieldInError = fieldIsInError(fieldName) != '' %}
+    {% set fieldInError = fieldIsInError(fieldName, error.inner) != '' %}
     <div class="fr-input-group {%- if fieldInError %} fr-input-group--error{% endif %}">
         <label class="fr-label" for="{{ fieldName }}">{{ label }}</label>
         <{{ tag }} class="fr-input {%- if fieldInError %} fr-input--error{% endif %}" type="text" id="{{ fieldName }}" name="{{ fieldName }}" {%- if tag == 'input' %} value="{{ userInput[fieldName] }}" {%- endif %}>
