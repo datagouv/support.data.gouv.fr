@@ -22,10 +22,13 @@ Each item of the `choices` attribute consists in a `label` displayed on the webp
 
 A new question follows the same structure as the top-level question.
 
-An answer can be of two types :
+An answer can be of three types :
 
 -   a `path` attribute, which must be a relative path to a markdown file containing the content to display
 -   a `content` attribute, which is the raw html displayed content
+-   a `form` attribute, which represents a ticket submission form, with the following properties:
+    -   `title`: the contact form title, displayed at the top
+    -   `recipient`: the target email address **handled by [Etalab's Zammad](https://support.etalab.gouv.fr)**
 
 # Tests
 
