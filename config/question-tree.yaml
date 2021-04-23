@@ -9,6 +9,7 @@ choices:
       link:
         form:
           title: Votre question
+          recipient: test@data.gouv.fr
     - label: Je veux tester une sous-question
       link:
         title: 'Vous voulez tester :'

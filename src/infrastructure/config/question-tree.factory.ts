@@ -18,7 +18,7 @@ export type RawChoice = {
     link:
         | { content: string }
         | { path: string }
-        | { form: { title: string } }
+        | { form: { title: string; recipient: string } }
         | RawQuestionTree;
 };
 
@@ -64,7 +64,7 @@ const refineRawLink = (
     rawLink:
         | { content: string }
         | { path: string }
-        | { form: { title: string } }
+        | { form: { title: string; recipient: string } }
         | RawQuestionTree,
     basePath: string
 ): Answer | Question => {

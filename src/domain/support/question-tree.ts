@@ -4,7 +4,7 @@ export type Answer =
     | {
           content: string;
       }
-    | { form: { title: string } };
+    | { form: { title: string; recipient: string } };
 
 export type ChoiceId = Brand<string, "ChoiceId">;
 
