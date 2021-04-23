@@ -8,7 +8,7 @@ choices:
     - label: Je veux tester le formulaire de contact
       link:
         form:
-          title: Votre question
+          title: Contactez-nous
           recipient: test@data.gouv.fr
     - label: Je veux tester une sous-question
       link:
