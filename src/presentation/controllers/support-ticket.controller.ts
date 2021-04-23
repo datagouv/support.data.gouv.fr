@@ -34,6 +34,10 @@ export const createSupportTicket = async (
     res.redirect(303, "/merci");
 };
 
+export const thankYou = (req: Request, res: Response): void => {
+    res.render("thank-you.njk");
+};
+
 const createSupportTicketSchema: SchemaOf<CreateTicketDTO> = object({
     author: string().defined().required().email(),
     recipient: string().defined().required().email(),
