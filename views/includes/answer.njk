@@ -7,6 +7,6 @@
     <div class="border-solid border-gray-200 border-2 px-8 py-12 my-12 rounded-md relative">
         <h3 class="bg-white absolute -top-5 left-8 px-2 py-1 rounded-md text-base font-black">{{ supportFlow.finalAnswer.form.title }}</h3>
         {% set recipient = supportFlow.finalAnswer.form.recipient %}
-        {% include 'frames/form.njk' %}
+        {% include 'includes/form.njk' %}
     </div>
 {% endif %}

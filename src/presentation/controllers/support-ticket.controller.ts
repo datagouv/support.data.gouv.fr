@@ -22,12 +22,12 @@ export const createSupportTicket = async (
         if (err instanceof ValidationError) {
             res.status(422);
             error = presentValidationError(err);
-            res.render("frames/form.njk", { userInput, error });
+            res.render("includes/form.njk", { userInput, error });
             return;
         } else {
             res.status(502);
             error = "Impossible de soumettre votre demande.";
-            res.render("frames/form.njk", { userInput, error });
+            res.render("includes/form.njk", { userInput, error });
             return;
         }
     }
