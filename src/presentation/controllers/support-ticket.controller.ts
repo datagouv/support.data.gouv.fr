@@ -22,7 +22,8 @@ export const createSupportTicket = async (
         if (err instanceof ValidationError) {
             res.status(422);
             error = presentValidationError(err);
-            res.render("includes/form.njk", { userInput, error });
+            res.render("includes/form/stream.njk", { userInput, error });
+            res.type("text/vnd.turbo-stream.html");
             return;
         } else {
             res.status(502);
