@@ -1,7 +1,20 @@
-{% macro fieldIsInError(fieldName, errors) -%}
-    {% for error in errors -%}
-        {% if error.path == fieldName -%}
-            {{ 'yes' }}
-        {%- endif %}
-    {%- endfor %}
-{%- endmacro %}
+{% macro renderField(fieldName, label, errorMessage, fieldsInError, userInput, tag='input') %}
+    {% if fieldsInError %}
+        {% set fieldInError = fieldsInError.includes(fieldName) %}
+    {% else %}
+        {% set fieldIsInError = false%}
+    {% endif %}
+    <div class="fr-input-group {%- if fieldInError %} fr-input-group--error{% endif %}">
+        <label class="fr-label" for="{{ fieldName }}">{{ label }}</label>
+        <{{tag}} class="fr-input {%- if fieldInError %} fr-input--error{% endif %}" type="text" id="{{ fieldName }}" name="{{ fieldName }}" {%- if tag == 'input' %} value="{{ userInput[fieldName] }}" {% else %} rows="4" {%- endif %}>
+            {%- if tag == "textarea" -%}
+                {{ userInput[fieldName] }}
+            {%- endif -%}
+        </{{tag}}>
+        {% if fieldInError %}
+            <p class="fr-error-text">
+                {{ errorMessage }}
+            </p>
+        {% endif %}
+    </div>
+{% endmacro %}
