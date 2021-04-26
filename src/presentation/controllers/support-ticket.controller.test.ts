@@ -39,17 +39,19 @@ describe("The support ticket controller", () => {
         const res = ({
             render: jest.fn(),
             status: jest.fn(),
+            type: jest.fn(),
         } as unknown) as Response & jest.Mocked<Response>;
 
         await createSupportTicket(req, res);
 
         expect(res.status).toHaveBeenCalledWith(422);
         expect(res.render).toHaveBeenCalledTimes(1);
-        expect(res.render.mock.calls[0][0]).toEqual("frames/form.njk");
+        expect(res.render.mock.calls[0][0]).toEqual("includes/form/stream.njk");
+        expect(res.type).toHaveBeenCalledWith("text/vnd.turbo-stream.html");
         expect(res.render.mock.calls[0][1]).toHaveProperty("error");
         expect(res.render.mock.calls[0][1]).toMatchObject({
             error: {
-                message: "2 errors occurred",
+                fieldsInError: ["subject", "subject"],
             },
         });
     });
@@ -82,7 +84,7 @@ describe("The support ticket controller", () => {
 
         expect(res.status).toHaveBeenCalledWith(502);
         expect(res.render).toHaveBeenCalledTimes(1);
-        expect(res.render).toHaveBeenCalledWith("frames/form.njk", {
+        expect(res.render).toHaveBeenCalledWith("includes/form.njk", {
             error: "Impossible de soumettre votre demande.",
             userInput: validBody,
         });
