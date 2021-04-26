@@ -49,7 +49,7 @@ describe("The support ticket controller", () => {
         expect(res.render.mock.calls[0][1]).toHaveProperty("error");
         expect(res.render.mock.calls[0][1]).toMatchObject({
             error: {
-                message: "2 errors occurred",
+                fieldsInError: ["subject", "subject"],
             },
         });
     });

@@ -21,7 +21,7 @@ export const createSupportTicket = async (
     } catch (err) {
         if (err instanceof ValidationError) {
             res.status(422);
-            error = err;
+            error = presentValidationError(err);
             res.render("frames/form.njk", { userInput, error });
             return;
         } else {
@@ -47,4 +47,24 @@ const createSupportTicketSchema: SchemaOf<CreateTicketDTO> = object({
 
 export const validateRequest = (body: unknown): Promise<CreateTicketDTO> => {
     return createSupportTicketSchema.validate(body, { abortEarly: false });
+};
+
+type FieldsValidationError = {
+    fieldsInError: string[];
+};
+
+export const presentValidationError = (
+    validationError: ValidationError
+): FieldsValidationError => {
+    return validationError.inner.reduce(
+        (errorMap, error) => {
+            if (error.path == undefined) {
+                return errorMap;
+            }
+            return {
+                fieldsInError: [...errorMap.fieldsInError, error.path],
+            };
+        },
+        { fieldsInError: [] } as FieldsValidationError
+    );
 };
