@@ -5,10 +5,7 @@ jest.mock("../../application/usecases/create-support-ticket.usecase", () => ({
     createSupportTicketUseCase: useCaseMock,
 }));
 
-import {
-    createSupportTicket,
-    validateRequest,
-} from "./support-ticket.controller";
+import { createSupportTicket } from "./support-ticket.controller";
 
 describe("The support ticket controller", () => {
     const validBody = {
@@ -21,39 +18,6 @@ describe("The support ticket controller", () => {
 
     it("exists", () => {
         expect(createSupportTicket).toBeDefined();
-    });
-
-    it("has a request validation function", () => {
-        expect(
-            validateRequest({
-                ...validBody,
-                recipient: "lol",
-            })
-        ).rejects.toThrow("recipient must be a valid email");
-    });
-
-    it("renders validation errors", async () => {
-        const req = {
-            body: { ...validBody, subject: undefined },
-        } as Request;
-        const res = ({
-            render: jest.fn(),
-            status: jest.fn(),
-            type: jest.fn(),
-        } as unknown) as Response & jest.Mocked<Response>;
-
-        await createSupportTicket(req, res);
-
-        expect(res.status).toHaveBeenCalledWith(422);
-        expect(res.render).toHaveBeenCalledTimes(1);
-        expect(res.render.mock.calls[0][0]).toEqual("includes/form/stream.njk");
-        expect(res.type).toHaveBeenCalledWith("text/vnd.turbo-stream.html");
-        expect(res.render.mock.calls[0][1]).toHaveProperty("error");
-        expect(res.render.mock.calls[0][1]).toMatchObject({
-            error: {
-                fieldsInError: ["subject", "subject"],
-            },
-        });
     });
 
     it("renders a success when input is correct and ticket is created", async () => {
@@ -76,6 +40,7 @@ describe("The support ticket controller", () => {
         } as Request;
         const res = ({
             status: jest.fn(),
+            type: jest.fn(),
             render: jest.fn(),
         } as unknown) as Response;
         useCaseMock.mockRejectedValue(undefined);
@@ -84,7 +49,8 @@ describe("The support ticket controller", () => {
 
         expect(res.status).toHaveBeenCalledWith(502);
         expect(res.render).toHaveBeenCalledTimes(1);
-        expect(res.render).toHaveBeenCalledWith("includes/form.njk", {
+        expect(res.type).toHaveBeenCalledWith("text/vnd.turbo-stream.html");
+        expect(res.render).toHaveBeenCalledWith("includes/form/stream.njk", {
             error: "Impossible de soumettre votre demande.",
             userInput: validBody,
         });
