@@ -45,7 +45,7 @@ choices:
         form:
           title: "Contactez-nous (Cette demande d'information n'est pas assimilable à une saisie de la Commission d'accès aux documents administratifs (CADA))".
            recipient: ouverture@data.gouv.fr  
-    - label: "J'ai une question relative à des données à caractère personnel"
+     - label: "J'ai une question relative à des données à caractère personnel"
       link:
         title: 'Votre question concerne :'
         choices:
