@@ -34,7 +34,7 @@ choices:
         path: answers/demarches_admin.md
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
       link:
-        path: question_donnees.md
+        path: answers/question_donnees.md
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       link:
         form:
