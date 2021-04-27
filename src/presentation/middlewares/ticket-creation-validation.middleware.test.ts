@@ -21,9 +21,22 @@ describe("The validation middleware", () => {
         const next = jest.fn();
 
         await validateTicketCreationRequest(req, res, next);
+
         expect(next).toBeCalledTimes(1);
         expect(next.mock.calls[0][0]).toMatchObject({
             message: "2 errors occurred",
         });
+    });
+
+    it("does nothing when the body is valid", async () => {
+        const req = {
+            body: validBody,
+        } as Request;
+        const res = (jest.fn() as unknown) as Response;
+        const next = jest.fn();
+
+        await validateTicketCreationRequest(req, res, next);
+
+        expect(next).toBeCalledWith();
     });
 });
