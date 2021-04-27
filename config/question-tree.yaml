@@ -39,25 +39,25 @@ choices:
       link:
         form:
           title: "Contactez-nous (nous vous invitions à consulter la [documentation](https://doc.data.gouv.fr/) au préalable".
-           recipient: support@data.gouv.fr
+          recipient: support@data.gouv.fr
      - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
        link:
         form:
           title: "Contactez-nous (Cette demande d'information n'est pas assimilable à une saisie de la Commission d'accès aux documents administratifs (CADA))".
-           recipient: ouverture@data.gouv.fr  
+          recipient: ouverture@data.gouv.fr
      - label: "J'ai une question relative à des données à caractère personnel"
-      link:
-        title: 'Votre question concerne :'
-        choices:
+       link:
+         title: 'Votre question concerne :'
+         choices:
         - label: La base de données des demandes de valeurs foncières (transactions immobilières)
           link:
             content: La réponse est non
         - label: Le Repertoire national des associations (RNA)
           link:
-            content: La réponse est toujours non        
+            content: La réponse est toujours non 
         - label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
           link:
-            content: "Puisqu'on vous dit que c'est non"  
+            content: "Puisqu'on vous dit que c'est non"
         - label: Le fichier des personnes décédées
           link:
-            content: Bon très bien, les réponses à ces questions sont [ici](https://pad.incubateur.net/Su0HeDybQzSKV1wQ3Vn0Uw?both)  
+            content: Bon très bien, les réponses à ces questions sont [ici](https://pad.incubateur.net/Su0HeDybQzSKV1wQ3Vn0Uw?both)
