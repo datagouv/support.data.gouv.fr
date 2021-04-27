@@ -38,12 +38,12 @@ choices:
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       link:
         form:
-          title: "Contactez-nous (nous vous invitions à consulter la [documentation](https://doc.data.gouv.fr/) au préalable".
+          title: Contactez-nous (mais ça ne va pas marcher haha)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       link:
         form:
-          title: "Contactez-nous (Cette demande d'information n'est pas assimilable à une saisie de la Commission d'accès aux documents administratifs (CADA))".
+          title: Contactez-nous (mais ça ne va pas marcher haha)
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
