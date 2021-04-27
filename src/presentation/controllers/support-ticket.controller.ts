@@ -16,8 +16,9 @@ export const createSupportTicket = async (
         await createSupportTicketUseCase(userInput, ticketManager);
     } catch (err) {
         res.status(502);
+        res.type("text/vnd.turbo-stream.html");
         const error = "Impossible de soumettre votre demande.";
-        res.render("includes/form.njk", { userInput, error });
+        res.render("includes/form/stream.njk", { userInput, error });
         return;
     }
     res.redirect(303, "/merci");

@@ -40,6 +40,7 @@ describe("The support ticket controller", () => {
         } as Request;
         const res = ({
             status: jest.fn(),
+            type: jest.fn(),
             render: jest.fn(),
         } as unknown) as Response;
         useCaseMock.mockRejectedValue(undefined);
@@ -48,7 +49,8 @@ describe("The support ticket controller", () => {
 
         expect(res.status).toHaveBeenCalledWith(502);
         expect(res.render).toHaveBeenCalledTimes(1);
-        expect(res.render).toHaveBeenCalledWith("includes/form.njk", {
+        expect(res.type).toHaveBeenCalledWith("text/vnd.turbo-stream.html");
+        expect(res.render).toHaveBeenCalledWith("includes/form/stream.njk", {
             error: "Impossible de soumettre votre demande.",
             userInput: validBody,
         });
