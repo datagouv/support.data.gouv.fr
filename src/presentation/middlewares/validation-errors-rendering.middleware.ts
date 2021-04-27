@@ -26,15 +26,17 @@ type FieldsValidationError = {
 export const presentValidationError = (
     validationError: ValidationError
 ): FieldsValidationError => {
-    return validationError.inner.reduce(
-        (errorMap, error) => {
+    const fieldsInError = validationError.inner.reduce(
+        (fieldsInError, error) => {
             if (error.path == undefined) {
-                return errorMap;
+                return fieldsInError;
             }
-            return {
-                fieldsInError: [...errorMap.fieldsInError, error.path],
-            };
+            return [...fieldsInError, error.path];
         },
-        { fieldsInError: [] } as FieldsValidationError
+        [] as string[]
     );
+
+    return {
+        fieldsInError: Array.from(new Set(fieldsInError)),
+    };
 };

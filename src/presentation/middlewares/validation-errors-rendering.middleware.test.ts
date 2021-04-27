@@ -32,6 +32,11 @@ describe("The validation errors rendering middleware", () => {
                 "pas valide",
                 "croute"
             ),
+            new ValidationError(
+                "une autre erreur sur le champ croute",
+                "pas valide",
+                "croute"
+            ),
         ]);
 
         renderValidationErrors(error, req, res, next);
