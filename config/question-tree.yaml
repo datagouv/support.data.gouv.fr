@@ -41,7 +41,7 @@ choices:
           title: "Contactez-nous (nous vous invitions à consulter la [documentation](https://doc.data.gouv.fr/) au préalable".
            recipient: support@data.gouv.fr
      - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
-      link:
+       link:
         form:
           title: "Contactez-nous (Cette demande d'information n'est pas assimilable à une saisie de la Commission d'accès aux documents administratifs (CADA))".
            recipient: ouverture@data.gouv.fr  
