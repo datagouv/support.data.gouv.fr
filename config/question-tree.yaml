@@ -113,6 +113,8 @@ choices:
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
+        title: 'Votre question concerne :'
+        choices:
         - label: La base de données des demandes de valeurs foncières (transactions immobilières)
           link:
             content: La réponse est non
@@ -144,6 +146,8 @@ choices:
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
+        title: 'Votre question concerne :'
+        choices:
         - label: La base de données des demandes de valeurs foncières (transactions immobilières)
           link:
             content: La réponse est non
