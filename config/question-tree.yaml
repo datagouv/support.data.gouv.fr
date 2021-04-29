@@ -38,12 +38,12 @@ choices:
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       link:
         form:
-          title: Contactez-nous (nous vous invitons à consulter la documentation de data.gouv.fr au préalable)
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       link:
         form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA))
+          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
@@ -61,6 +61,11 @@ choices:
         - label: Le fichier des personnes décédées
           link:
             content: Bon très bien, les réponses à ces questions sont
+        - label: Autre
+          link:
+            form:
+              title: Contactez-nous
+              recipient: ouverture@data.gouv.fr
 - label: Une chercheuse ou un chercheur 
   link:
     title: Comment pouvons-nous vous aider ?
@@ -71,12 +76,12 @@ choices:
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       link:
         form:
-          title: Contactez-nous (nous vous invitons à consulter la documentation de data.gouv.fr au préalable)
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       link:
         form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA))
+          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
@@ -94,6 +99,11 @@ choices:
         - label: Le fichier des personnes décédées
           link:
             content: Bon très bien, les réponses à ces questions sont
+        - label: Autre
+          link:
+            form:
+              title: Contactez-nous
+              recipient: ouverture@data.gouv.fr
 - label: Une administration centrale
   link:
     title: Comment pouvons-nous vous aider ?
@@ -104,12 +114,12 @@ choices:
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       link:
         form:
-          title: Contactez-nous (nous vous invitons à consulter la documentation de data.gouv.fr au préalable)
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       link:
         form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA))
+          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
@@ -127,6 +137,11 @@ choices:
         - label: Le fichier des personnes décédées
           link:
             content: Bon très bien, les réponses à ces questions sont
+        - label: Autre
+          link:
+            form:
+              title: Contactez-nous
+              recipient: ouverture@data.gouv.fr
 - label: Une collectivité territoriale
   link:
     title: Comment pouvons-nous vous aider ?
@@ -137,12 +152,12 @@ choices:
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       link:
         form:
-          title: Contactez-nous (nous vous invitons à consulter la documentation de data.gouv.fr au préalable)
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       link:
         form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA))
+          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
@@ -160,6 +175,11 @@ choices:
         - label: Le fichier des personnes décédées
           link:
             content: Bon très bien, les réponses à ces questions sont
+        - label: Autre
+          link:
+            form:
+              title: Contactez-nous
+              recipient: ouverture@data.gouv.fr
 - label: Une entreprise
   link:
     title: Comment pouvons-nous vous aider ?
@@ -170,12 +190,12 @@ choices:
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       link:
         form:
-          title: Contactez-nous (nous vous invitons à consulter la documentation de data.gouv.fr au préalable)
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       link:
         form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA))
+          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
@@ -193,6 +213,11 @@ choices:
         - label: Le fichier des personnes décédées
           link:
             content: Bon très bien, les réponses à ces questions sont
+        - label: Autre
+          link:
+            form:
+              title: Contactez-nous
+              recipient: ouverture@data.gouv.fr
 - label: Une association
   link:
     title: Comment pouvons-nous vous aider ?
@@ -206,12 +231,12 @@ choices:
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       link:
         form:
-          title: Contactez-nous (nous vous invitons à consulter la documentation de data.gouv.fr au préalable)
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       link:
         form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA))
+          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
@@ -229,6 +254,11 @@ choices:
         - label: Le fichier des personnes décédées
           link:
             content: Bon très bien, les réponses à ces questions sont
+        - label: Autre
+          link:
+            form:
+              title: Contactez-nous
+              recipient: ouverture@data.gouv.fr
 - label: Autre
   link:
     title: Comment pouvons-nous vous aider ?
@@ -242,12 +272,12 @@ choices:
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       link:
         form:
-          title: Contactez-nous (nous vous invitons à consulter la documentation de data.gouv.fr au préalable)
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       link:
         form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA))
+          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
     - label: "J'ai une question relative à des données à caractère personnel"
       link:
@@ -265,3 +295,8 @@ choices:
         - label: Le fichier des personnes décédées
           link:
             content: Bon très bien, les réponses à ces questions sont
+        - label: Autre
+          link:
+            form:
+              title: Contactez-nous
+              recipient: ouverture@data.gouv.fr
