@@ -66,6 +66,23 @@ choices:
             form:
               title: Contactez-nous
               recipient: ouverture@data.gouv.fr
+- label: Une ou un journaliste
+  link:
+    title: Comment pouvons-nous vous aider ?
+    choices:
+    - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
+      link:
+        path: answers/question_donnees.md
+    - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+      link:
+        form:
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
+          recipient: support@data.gouv.fr
+    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+      link:
+        form:
+          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
+          recipient: ouverture@data.gouv.fr
 - label: Une chercheuse ou un chercheur 
   link:
     title: Comment pouvons-nous vous aider ?
