@@ -7,6 +7,7 @@ describe("The validation middleware", () => {
         recipient: "lol@lol.com",
         subject: "Aled",
         body: "J'ai besoin d'aide",
+        userPath: "Un particulier |> J'ai besoin d'aide mon pote",
         name: "",
     };
 

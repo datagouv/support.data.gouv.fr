@@ -22,4 +22,5 @@ const createSupportTicketSchema: SchemaOf<CreateTicketDTO> = object({
     recipient: string().defined().required().email(),
     subject: string().required().defined(),
     body: string().required().defined(),
+    userPath: string().required().defined(),
 });
