@@ -19,15 +19,18 @@ describe("The Zammad ticket manager", () => {
             recipient: "support@data.gouv.fr",
             subject: "Aled",
             author: "georges@moustaki.fr",
+            userPath: "Un particulier |> Aled",
         };
 
         zammadTickerManager.createTicket(createTicketDTO);
+
+        const computedBody = `Parcours utilisateur : ${createTicketDTO.userPath}\n\n${createTicketDTO.body}`;
 
         expect(clientMock.createTicket).toBeCalledWith(
             createTicketDTO.author,
             createTicketDTO.recipient,
             createTicketDTO.subject,
-            createTicketDTO.body
+            computedBody
         );
     });
 });
