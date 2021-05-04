@@ -6,11 +6,13 @@ export class ZammadTicketManager implements TicketManager {
     constructor(private readonly zammadClient: ZammadClient) {}
 
     createTicket(createTicket: CreateTicketDTO): Promise<void> {
+        const computedBody = `Parcours utilisateur : ${createTicket.userPath}\n\n${createTicket.body}`;
+
         return this.zammadClient.createTicket(
             createTicket.author,
             createTicket.recipient,
             createTicket.subject,
-            createTicket.body
+            computedBody
         );
     }
 }
