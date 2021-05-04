@@ -3,6 +3,11 @@
 {% block body %}
     <h1 class="mb-12">Bonjour 👋, comment pouvons-nous vous aider ?
     </h1>
+    <p>Avant de nous contacter, nous vous invitons à consulter
+        <a href="https://doc.data.gouv.fr/" target="_blank">la documentation technique de data.gouv.fr</a>
+        ainsi que
+        <a href="https://guides.etalab.gouv.fr/accueil.html" target="_blank">les guides d'Etalab</a>
+        , conçus pour vous accompagner dans votre démarche d'open data.</p>
     <p>Pour commencer, nous aimerions faire connaissance :</p>
     <turbo-frame id="support-tree">
         {% for level in supportFlow.levels %}
