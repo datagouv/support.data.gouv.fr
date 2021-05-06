@@ -14,8 +14,10 @@
             {% set prefix %}{{ choicesPrefixes[loop.index0 - 1] }}{% endset %}
             {% include 'includes/question.njk' %}
         {% endfor %}
-        {% if supportFlow.isFullyFilled %}
-            {% include 'includes/answer.njk' %}
-        {% endif %}
+        <div class="my-12">
+            {% if supportFlow.isFullyFilled %}
+                {% include 'includes/answer.njk' %}
+            {% endif %}
+        </div>
     </turbo-frame>
 {% endblock %}
