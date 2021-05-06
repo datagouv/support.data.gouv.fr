@@ -40,6 +40,7 @@ module.exports = {
                     contentWithoutStyleBlocks.match(/[A-Za-z0-9-_/:\.]+/g) || []
                 );
             },
+            safelist: [/modal.*/],
         }),
     ],
     devtool: devMode ? "eval-source-map" : "source-map",
