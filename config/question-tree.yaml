@@ -1,30 +1,6 @@
 ---
 title: Qui êtes-vous ?
 choices:
-- label: Un testeur de cet outil de support
-  link:
-    title: Comment pouvons-nous vous aider ?
-    choices:
-    - label: Je veux tester le formulaire de contact
-      link:
-        form:
-          title: Contactez-nous
-          recipient: test@data.gouv.fr
-    - label: Je veux tester le formulaire de contact quand Zammad ne marche pas
-      link:
-        form:
-          title: Contactez-nous (mais ça ne va pas marcher haha)
-          recipient: croute@data.gouv.fr
-    - label: Je veux tester une sous-question
-      link:
-        title: 'Vous voulez tester :'
-        choices:
-        - label: Du contenu en markdown
-          link:
-            path: answers/contenu.md
-        - label: Du contenu brut
-          link:
-            content: Le contenu brut se configure directement dans le fichier config/question-tree.yaml
 - label: Un particulier
   link:
     title: Comment pouvons-nous vous aider ?
@@ -296,24 +272,24 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "J'ai une question relative à des données à caractère personnel"
-      link:
-        title: 'Votre question concerne :'
-        choices:
-        - label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          link:
-            content: La réponse est non
-        - label: Le Repertoire national des associations (RNA)
-          link:
-            content: La réponse est toujours non 
-        - label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          link:
-            content: "Puisqu'on vous dit que c'est non"
-        - label: Le fichier des personnes décédées
-          link:
-            content: Bon très bien, les réponses à ces questions sont
-        - label: Autre
-          link:
-            form:
-              title: Contactez-nous
-              recipient: ouverture@data.gouv.fr
+    #- label: "J'ai une question relative à des données à caractère personnel"
+      #link:
+        #title: 'Votre question concerne :'
+        #choices:
+        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
+          #link:
+            #content: La réponse est non
+        #- label: Le Repertoire national des associations (RNA)
+          #link:
+            #content: La réponse est toujours non 
+        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
+          #link:
+            #content: "Puisqu'on vous dit que c'est non"
+        #- label: Le fichier des personnes décédées
+          #link:
+            #content: Bon très bien, les réponses à ces questions sont
+        #- label: Autre
+          #link:
+            #form:
+              #title: Contactez-nous
+              #recipient: ouverture@data.gouv.fr
