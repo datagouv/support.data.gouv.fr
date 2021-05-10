@@ -21,27 +21,27 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "J'ai une question relative à des données à caractère personnel"
-      link:
-        title: 'Votre question concerne :'
-        choices:
-        - label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          link:
-            content: La réponse est non
-        - label: Le Repertoire national des associations (RNA)
-          link:
-            content: La réponse est toujours non 
-        - label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          link:
-            content: "Puisqu'on vous dit que c'est non"
-        - label: Le fichier des personnes décédées
-          link:
-            content: Bon très bien, les réponses à ces questions sont
-        - label: Autre
-          link:
-            form:
-              title: Contactez-nous
-              recipient: ouverture@data.gouv.fr
+    #- label: "J'ai une question relative à des données à caractère personnel"
+      #link:
+        #title: 'Votre question concerne :'
+        #choices:
+        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
+          #link:
+            #content: La réponse est non
+        #- label: Le Repertoire national des associations (RNA)
+          #link:
+            #content: La réponse est toujours non 
+        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
+          #link:
+            #content: "Puisqu'on vous dit que c'est non"
+        #- label: Le fichier des personnes décédées
+          #link:
+            #content: Bon très bien, les réponses à ces questions sont
+        #- label: Autre
+          #link:
+            #form:
+              #title: Contactez-nous
+              #recipient: ouverture@data.gouv.fr
 - label: Une ou un journaliste
   link:
     title: Comment pouvons-nous vous aider ?
@@ -76,27 +76,27 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "J'ai une question relative à des données à caractère personnel"
-      link:
-        title: 'Votre question concerne :'
-        choices:
-        - label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          link:
-            content: La réponse est non
-        - label: Le Repertoire national des associations (RNA)
-          link:
-            content: La réponse est toujours non 
-        - label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          link:
-            content: "Puisqu'on vous dit que c'est non"
-        - label: Le fichier des personnes décédées
-          link:
-            content: Bon très bien, les réponses à ces questions sont
-        - label: Autre
-          link:
-            form:
-              title: Contactez-nous
-              recipient: ouverture@data.gouv.fr
+    #- label: "J'ai une question relative à des données à caractère personnel"
+      #link:
+        #title: 'Votre question concerne :'
+        #choices:
+        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
+          #link:
+            #content: La réponse est non
+        #- label: Le Repertoire national des associations (RNA)
+          #link:
+            #content: La réponse est toujours non 
+        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
+          #link:
+            #content: "Puisqu'on vous dit que c'est non"
+        #- label: Le fichier des personnes décédées
+          #link:
+            #content: Bon très bien, les réponses à ces questions sont
+        #- label: Autre
+          #link:
+            #form:
+              #title: Contactez-nous
+              #recipient: ouverture@data.gouv.fr
 - label: Une administration centrale
   link:
     title: Comment pouvons-nous vous aider ?
@@ -114,27 +114,27 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "J'ai une question relative à des données à caractère personnel"
-      link:
-        title: 'Votre question concerne :'
-        choices:
-        - label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          link:
-            content: La réponse est non
-        - label: Le Repertoire national des associations (RNA)
-          link:
-            content: La réponse est toujours non 
-        - label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          link:
-            content: "Puisqu'on vous dit que c'est non"
-        - label: Le fichier des personnes décédées
-          link:
-            content: Bon très bien, les réponses à ces questions sont
-        - label: Autre
-          link:
-            form:
-              title: Contactez-nous
-              recipient: ouverture@data.gouv.fr
+    #- label: "J'ai une question relative à des données à caractère personnel"
+      #link:
+        #title: 'Votre question concerne :'
+        #choices:
+        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
+          #link:
+            #content: La réponse est non
+        #- label: Le Repertoire national des associations (RNA)
+          #link:
+            #content: La réponse est toujours non 
+        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
+          #link:
+            #content: "Puisqu'on vous dit que c'est non"
+        #- label: Le fichier des personnes décédées
+          #link:
+            #content: Bon très bien, les réponses à ces questions sont
+        #- label: Autre
+          #link:
+            #form:
+              #title: Contactez-nous
+              #recipient: ouverture@data.gouv.fr
 - label: Une collectivité territoriale
   link:
     title: Comment pouvons-nous vous aider ?
@@ -152,27 +152,27 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "J'ai une question relative à des données à caractère personnel"
-      link:
-        title: 'Votre question concerne :'
-        choices:
-        - label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          link:
-            content: La réponse est non
-        - label: Le Repertoire national des associations (RNA)
-          link:
-            content: La réponse est toujours non 
-        - label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          link:
-            content: "Puisqu'on vous dit que c'est non"
-        - label: Le fichier des personnes décédées
-          link:
-            content: Bon très bien, les réponses à ces questions sont
-        - label: Autre
-          link:
-            form:
-              title: Contactez-nous
-              recipient: ouverture@data.gouv.fr
+    #- label: "J'ai une question relative à des données à caractère personnel"
+      #link:
+        #title: 'Votre question concerne :'
+        #choices:
+        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
+          #link:
+            #content: La réponse est non
+        #- label: Le Repertoire national des associations (RNA)
+          #link:
+            #content: La réponse est toujours non 
+        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
+          #link:
+            #content: "Puisqu'on vous dit que c'est non"
+        #- label: Le fichier des personnes décédées
+          #link:
+            #content: Bon très bien, les réponses à ces questions sont
+        #- label: Autre
+          #link:
+            #form:
+              #title: Contactez-nous
+              #recipient: ouverture@data.gouv.fr
 - label: Une entreprise
   link:
     title: Comment pouvons-nous vous aider ?
@@ -190,27 +190,27 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "J'ai une question relative à des données à caractère personnel"
-      link:
-        title: 'Votre question concerne :'
-        choices:
-        - label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          link:
-            content: La réponse est non
-        - label: Le Repertoire national des associations (RNA)
-          link:
-            content: La réponse est toujours non 
-        - label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          link:
-            content: "Puisqu'on vous dit que c'est non"
-        - label: Le fichier des personnes décédées
-          link:
-            content: Bon très bien, les réponses à ces questions sont
-        - label: Autre
-          link:
-            form:
-              title: Contactez-nous
-              recipient: ouverture@data.gouv.fr
+    #- label: "J'ai une question relative à des données à caractère personnel"
+      #link:
+        #title: 'Votre question concerne :'
+        #choices:
+        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
+          #link:
+            #content: La réponse est non
+        #- label: Le Repertoire national des associations (RNA)
+          #link:
+            #content: La réponse est toujours non 
+        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
+          #link:
+            #content: "Puisqu'on vous dit que c'est non"
+        #- label: Le fichier des personnes décédées
+          #link:
+            #content: Bon très bien, les réponses à ces questions sont
+        #- label: Autre
+          #link:
+            #form:
+              #title: Contactez-nous
+              #recipient: ouverture@data.gouv.fr
 - label: Une association
   link:
     title: Comment pouvons-nous vous aider ?
@@ -231,27 +231,27 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "J'ai une question relative à des données à caractère personnel"
-      link:
-        title: 'Votre question concerne :'
-        choices:
-        - label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          link:
-            content: La réponse est non
-        - label: Le Repertoire national des associations (RNA)
-          link:
-            content: La réponse est toujours non 
-        - label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          link:
-            content: "Puisqu'on vous dit que c'est non"
-        - label: Le fichier des personnes décédées
-          link:
-            content: Bon très bien, les réponses à ces questions sont
-        - label: Autre
-          link:
-            form:
-              title: Contactez-nous
-              recipient: ouverture@data.gouv.fr
+    #- label: "J'ai une question relative à des données à caractère personnel"
+      #link:
+        #title: 'Votre question concerne :'
+        #choices:
+        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
+          #link:
+            #content: La réponse est non
+        #- label: Le Repertoire national des associations (RNA)
+          #link:
+            #content: La réponse est toujours non 
+        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
+          #link:
+            #content: "Puisqu'on vous dit que c'est non"
+        #- label: Le fichier des personnes décédées
+          #link:
+            #content: Bon très bien, les réponses à ces questions sont
+        #- label: Autre
+          #link:
+            #form:
+              #title: Contactez-nous
+              #recipient: ouverture@data.gouv.fr
 - label: Autre
   link:
     title: Comment pouvons-nous vous aider ?
