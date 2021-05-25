@@ -1,0 +1,21 @@
+name: Deploy to staging
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Push to dokku
+        uses: dokku/github-action@master
+        with:
+          git_remote_url: 'ssh://dokku@app.etalab.studio/support-staging-data-gouv-fr'
+          ssh_private_key: ${{ secrets.MY_PRIVATE_SSH_KEY }}
