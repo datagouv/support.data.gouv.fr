@@ -1,9 +1,7 @@
-name: Deploy
+name: Deploy to production
 
-on:
-  push:
-    branches:
-      - master
+on: 
+  workflow_dispatch: ~
 
 jobs:
   deploy:
@@ -17,5 +15,5 @@ jobs:
       - name: Push to dokku
         uses: dokku/github-action@master
         with:
-          git_remote_url: 'ssh://dokku@app.etalab.studio/support-staging-data-gouv-fr'
+          git_remote_url: 'ssh://dokku@app.etalab.studio/support.data.gouv.fr'
           ssh_private_key: ${{ secrets.MY_PRIVATE_SSH_KEY }}
