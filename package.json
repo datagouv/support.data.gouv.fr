@@ -9,9 +9,9 @@
     "prebuild": "npm run clean",
     "build": "run-p build:*",
     "build:client": "NODE_ENV=production webpack",
-    "build:prod": "tsc --project tsconfig.json",
-    "clean": "rimraf public/dist",
-    "lint": "eslint src --ext .js,.ts",
+    "build:prod": "tsc",
+    "clean": "gts clean",
+    "lint": "gts lint",
     "start": "NODE_ENV=production npm run start:prod",
     "start:dev": "run-p start:dev:*",
     "start:dev:client": "webpack --watch",
@@ -61,7 +61,9 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0",
-    "webpack-manifest-plugin": "^3.1.1"
+    "webpack-manifest-plugin": "^3.1.1",
+    "gts": "^3.1.0",
+    "@types/node": "^14.11.2"
   },
   "dependencies": {
     "@gouvfr/dsfr": "^1.0.0-rc1.0",
