@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import YAML from 'yaml';
-import {v4 as uuidv4} from 'uuid';
 import marked from 'marked';
 import {render} from 'nunjucks';
 import {
@@ -14,6 +13,7 @@ import {
 import {checkRawQuestionTreeType} from './raw-question-tree.guard';
 
 export type RawChoice = {
+  id: string;
   label: string;
   link:
     | {content: string}
@@ -50,7 +50,7 @@ const refineRawQuestion = (
     title: rawQuestion.title as QuestionTitle,
     choices: rawQuestion.choices.map((choice: RawChoice): Choice => {
       return {
-        id: uuidv4() as ChoiceId,
+        id: choice.id as ChoiceId,
         label: choice.label,
         link: refineRawLink(choice.link, basePath),
       };
