@@ -9,7 +9,7 @@
     "prebuild": "npm run clean",
     "build": "run-p build:*",
     "build:client": "NODE_ENV=production webpack",
-    "build:prod": "tsc",
+    "build:server": "tsc",
     "clean": "gts clean",
     "lint": "gts lint",
     "fix": "gts fix",
