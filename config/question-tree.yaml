@@ -2,21 +2,26 @@
 title: Qui êtes-vous ?
 choices:
 - label: Un particulier
+  id: particulier
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
     - label: "J'ai une question sur une procédure administrative"
+      id: procedure-administrative
       link:
         path: answers/demarches_admin.md
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
+      id: jeu-de-donnee
       link:
         path: answers/question_donnees.md
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+      id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+      id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
@@ -43,35 +48,43 @@ choices:
               #title: Contactez-nous
               #recipient: ouverture@data.gouv.fr
 - label: Une ou un journaliste
+  id: journaliste
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
+      id: jeu-de-donnee
       link:
         path: answers/question_donnees.md
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+      id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+      id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
 - label: Une chercheuse ou un chercheur 
+  id: chercheur
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
+      id: jeu-de-donnee
       link:
         path: answers/question_donnees.md
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+      id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+      id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
@@ -98,18 +111,22 @@ choices:
               #title: Contactez-nous
               #recipient: ouverture@data.gouv.fr
 - label: Une administration centrale
+  id: administration-centrale
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
+      id: jeu-de-donnee
       link:
         path: answers/question_donnees.md
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+      id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+      id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
@@ -136,18 +153,22 @@ choices:
               #title: Contactez-nous
               #recipient: ouverture@data.gouv.fr
 - label: Une collectivité territoriale
+  id: collectivite-territoriale
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
+      id: jeu-de-donnee
       link:
         path: answers/question_donnees.md
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+      id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+      id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
@@ -174,18 +195,22 @@ choices:
               #title: Contactez-nous
               #recipient: ouverture@data.gouv.fr
 - label: Une entreprise
+  id: entreprise
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
+      id: jeu-de-donnee
       link:
         path: answers/question_donnees.md
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+      id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+      id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
@@ -212,21 +237,26 @@ choices:
               #title: Contactez-nous
               #recipient: ouverture@data.gouv.fr
 - label: Une association
+  id: association
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
     - label: "J'ai une question sur une procédure administrative"
+      id: procedure-administrative
       link:
         path: answers/demarches_admin.md
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
+      id: jeu-de-donnee
       link:
         path: answers/question_donnees.md
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+      id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+      id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
@@ -253,21 +283,26 @@ choices:
               #title: Contactez-nous
               #recipient: ouverture@data.gouv.fr
 - label: Autre
+  id: autre
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
     - label: "J'ai une question sur une procédure administrative"
+      id: procedure-administrative
       link:
         path: answers/demarches_admin.md
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
+      id: jeu-de-donnee
       link:
         path: answers/question_donnees.md
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+      id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+      id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)

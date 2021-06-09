@@ -6,6 +6,7 @@ const rawQuestionTreeSchema: z.Schema<RawQuestionTree> = z.object({
   choices: z.array(
     z.object({
       label: z.string(),
+      id: z.string().regex(/^([a-z]+-)*[a-z]+$/),
       link: z.union([
         z.object({content: z.string()}),
         z.object({path: z.string()}),
