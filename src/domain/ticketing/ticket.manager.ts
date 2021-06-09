@@ -1,5 +1,5 @@
-import { CreateTicketDTO } from "./create-ticket.dto";
+import {CreateTicketDTO} from './create-ticket.dto';
 
 export interface TicketManager {
-    createTicket(createTicket: CreateTicketDTO): Promise<void>;
+  createTicket(createTicket: CreateTicketDTO): Promise<void>;
 }

@@ -1,9 +1,9 @@
-import { Question } from "../../domain/support/question-tree";
-import { SupportFlow, UserChoices } from "../../domain/support/support-flow";
+import {Question} from '../../domain/support/question-tree';
+import {SupportFlow, UserChoices} from '../../domain/support/support-flow';
 
 export const navigateSupportFlowUseCase = (
-    questionTree: Question,
-    userChoices: UserChoices
+  questionTree: Question,
+  userChoices: UserChoices
 ): SupportFlow => {
-    return new SupportFlow(questionTree, userChoices);
+  return new SupportFlow(questionTree, userChoices);
 };

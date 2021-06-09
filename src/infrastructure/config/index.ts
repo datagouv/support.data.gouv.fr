@@ -1,5 +1,5 @@
-import * as dotenv from "dotenv";
-import { buildQuestionTree } from "./question-tree.factory";
+import * as dotenv from 'dotenv';
+import {buildQuestionTree} from './question-tree.factory';
 
 dotenv.config();
 

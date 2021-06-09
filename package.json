@@ -12,6 +12,7 @@
     "build:prod": "tsc",
     "clean": "gts clean",
     "lint": "gts lint",
+    "fix": "gts fix",
     "start": "NODE_ENV=production npm run start:prod",
     "start:dev": "run-p start:dev:*",
     "start:dev:client": "webpack --watch",

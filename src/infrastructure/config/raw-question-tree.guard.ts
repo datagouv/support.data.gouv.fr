@@ -1,5 +1,5 @@
-import { RawQuestionTree } from "./question-tree.factory";
-import { z } from "zod";
+import {RawQuestionTree} from './question-tree.factory';
+import {z} from 'zod';
 
 const rawQuestionTreeSchema: z.Schema<RawQuestionTree> = z.object({
   title: z.string(),
@@ -7,10 +7,10 @@ const rawQuestionTreeSchema: z.Schema<RawQuestionTree> = z.object({
     z.object({
       label: z.string(),
       link: z.union([
-        z.object({ content: z.string() }),
-        z.object({ path: z.string() }),
+        z.object({content: z.string()}),
+        z.object({path: z.string()}),
         z.object({
-          form: z.object({ title: z.string(), recipient: z.string() }),
+          form: z.object({title: z.string(), recipient: z.string()}),
         }),
         z.lazy(() => rawQuestionTreeSchema),
       ]),

@@ -1,18 +1,18 @@
-import { CreateTicketDTO } from "../../domain/ticketing/create-ticket.dto";
-import { TicketManager } from "../../domain/ticketing/ticket.manager";
-import { ZammadClient } from "./zammad.client";
+import {CreateTicketDTO} from '../../domain/ticketing/create-ticket.dto';
+import {TicketManager} from '../../domain/ticketing/ticket.manager';
+import {ZammadClient} from './zammad.client';
 
 export class ZammadTicketManager implements TicketManager {
-    constructor(private readonly zammadClient: ZammadClient) {}
+  constructor(private readonly zammadClient: ZammadClient) {}
 
-    createTicket(createTicket: CreateTicketDTO): Promise<void> {
-        const computedBody = `Parcours utilisateur : ${createTicket.userPath}\n\n${createTicket.body}`;
+  createTicket(createTicket: CreateTicketDTO): Promise<void> {
+    const computedBody = `Parcours utilisateur : ${createTicket.userPath}\n\n${createTicket.body}`;
 
-        return this.zammadClient.createTicket(
-            createTicket.author,
-            createTicket.recipient,
-            createTicket.subject,
-            computedBody
-        );
-    }
+    return this.zammadClient.createTicket(
+      createTicket.author,
+      createTicket.recipient,
+      createTicket.subject,
+      computedBody
+    );
+  }
 }
