@@ -26,6 +26,12 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Autre"
+      id: autre
+      link:
+        form:
+          title: Contactez-nous
+          recipient: support@data.gouv.fr
     #- label: "J'ai une question relative à des données à caractère personnel"
       #link:
         #title: 'Votre question concerne :'
