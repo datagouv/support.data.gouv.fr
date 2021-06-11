@@ -21,7 +21,7 @@ choices:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-sécurité
+      id: faille-securite
       link:
         form:
           title: Contactez-nous
@@ -108,7 +108,7 @@ choices:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-sécurité
+      id: faille-securite
       link:
         form:
           title: Contactez-nous
@@ -162,7 +162,7 @@ choices:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-sécurité
+      id: faille-securite
       link:
         form:
           title: Contactez-nous
@@ -228,7 +228,7 @@ choices:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-sécurité
+      id: faille-securite
       link:
         form:
           title: Contactez-nous
@@ -293,18 +293,18 @@ choices:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
+    - label: "Je souhaite signaler une faille de sécurité"
+      id: faille-securite
+      link:
+        form:
+          title: Contactez-nous
+          recipient: support@data.gouv.fr
     - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
       id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-sécurité
-      link:
-        form:
-          title: Contactez-nous
-          recipient: support@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
@@ -352,7 +352,7 @@ choices:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-sécurité
+      id: faille-securite
       link:
         form:
           title: Contactez-nous
@@ -410,7 +410,7 @@ choices:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-sécurité
+      id: faille-securite
       link:
         form:
           title: Contactez-nous
