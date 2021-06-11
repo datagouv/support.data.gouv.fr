@@ -74,7 +74,7 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-     - label: "Autre"
+    - label: "Autre"
       id: autre
       link:
         form:
@@ -101,7 +101,7 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-     - label: "Autre"
+    - label: "Autre"
       id: autre
       link:
         form:
@@ -297,7 +297,7 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-     - label: "Autre"
+    - label: "Autre"
       id: autre
       link:
         form:
