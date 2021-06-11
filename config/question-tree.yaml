@@ -75,7 +75,7 @@ choices:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
     - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-sécurité
+      id: faille-securite
       link:
         form:
           title: Contactez-nous
