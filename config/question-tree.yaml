@@ -155,6 +155,23 @@ choices:
       id: jeu-de-donnee
       link:
         path: answers/question_donnees.md
+    - label: "Je souhaite référencer mes données sur data.gouv.fr"
+      id: referencement
+      link:
+        title: 'Où sont situées vos données ?'
+        choices:
+        - label: Mes données sont sur un portail open data existant
+          id: moissonnage
+          link:
+            form:
+              title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
+              recipient: moissonnage@data.gouv.fr
+        - label: Mes données ne sont pas sur un portail open data existant
+          id: ouverture
+          link:
+            form:
+              title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
+              recipient: ouverture@data.gouv.fr
     - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
       id: probleme-technique
       link:
@@ -239,6 +256,23 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Je souhaite référencer mes données sur data.gouv.fr"
+      id: referencement
+      link:
+        title: 'Où sont situées vos données ?'
+        choices:
+        - label: Mes données sont sur un portail open data existant
+          id: moissonnage
+          link:
+            form:
+              title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
+              recipient: moissonnage@data.gouv.fr
+        - label: Mes données ne sont pas sur un portail open data existant
+          id: ouverture
+          link:
+            form:
+              title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
+              recipient: ouverture@data.gouv.fr
     - label: "Je souhaite faire une demande d'homologation de licence"
       id: licence
       link:
