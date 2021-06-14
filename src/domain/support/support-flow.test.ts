@@ -23,6 +23,11 @@ describe('Support flow', () => {
                 label: 'Choice 2 1',
                 link: answerLevel2,
               },
+              {
+                id: 'choice1_1' as ChoiceId,
+                label: 'Choice 2 2',
+                link: answerLevel2,
+              },
             ],
           },
         },
@@ -79,6 +84,17 @@ describe('Support flow', () => {
       ];
       const answerFlow = new SupportFlow(questionTree, userChoices);
       expect(answerFlow.isFullyFilled).toBeTruthy();
+    });
+
+    it('handles identical choices ids', () => {
+      const userChoices: UserChoices = ['choice1_1' as ChoiceId];
+      const answerFlow = new SupportFlow(questionTree, userChoices);
+      expect(answerFlow.levels).toHaveLength(2);
+      expect(answerFlow.levels[0].choices[0].selected).toBeTruthy();
+      expect(answerFlow.levels[0].choices[1].selected).toBeFalsy();
+      expect(answerFlow.levels[1].choices[0].selected).toBeFalsy();
+      expect(answerFlow.levels[1].choices[1].selected).toBeFalsy();
+      expect(answerFlow.isFullyFilled).toBeFalsy();
     });
   });
 });
