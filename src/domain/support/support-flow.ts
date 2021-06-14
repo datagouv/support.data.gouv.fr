@@ -37,14 +37,15 @@ export class SupportFlow {
   private static getLevelsFromSelectedNode(
     node: Question | Answer,
     userChoices: UserChoices,
-    finalAnswerSetter: (answer: Answer) => void
+    finalAnswerSetter: (answer: Answer) => void,
+    level = 0
   ): Level[] {
     if (!linkIsAQuestion(node)) {
       finalAnswerSetter(node);
       return [];
     }
-    const choiceCandidate = node.choices.find(choice =>
-      userChoices.includes(choice.id)
+    const choiceCandidate = node.choices.find(
+      choice => userChoices.length > level && userChoices[level] === choice.id
     );
 
     let subLevels: Level[] = [];
@@ -56,7 +57,8 @@ export class SupportFlow {
       subLevels = SupportFlow.getLevelsFromSelectedNode(
         selectedChoice.link,
         userChoices,
-        finalAnswerSetter
+        finalAnswerSetter,
+        level + 1
       );
     }
     return [
@@ -65,7 +67,8 @@ export class SupportFlow {
         choices: node.choices.map(choice => ({
           id: choice.id,
           label: choice.label,
-          selected: userChoices.includes(choice.id),
+          selected:
+            userChoices.length > level && userChoices[level] === choice.id,
         })),
       },
       ...subLevels,
