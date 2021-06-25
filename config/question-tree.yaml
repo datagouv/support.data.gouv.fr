@@ -32,6 +32,12 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Je souhaite exercer mon droit d’accès, de rectification et d’opposition"
+      id: droit-acces
+      link:
+        form:
+          title: Contactez-nous
+          recipient: contact@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
@@ -86,6 +92,12 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Je souhaite exercer mon droit d’accès, de rectification et d’opposition"
+      id: droit-acces
+      link:
+        form:
+          title: Contactez-nous
+          recipient: contact@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
@@ -119,6 +131,12 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Je souhaite exercer mon droit d’accès, de rectification et d’opposition"
+      id: droit-acces
+      link:
+        form:
+          title: Contactez-nous
+          recipient: contact@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
@@ -202,6 +220,12 @@ choices:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: certification@data.gouv.fr
+    - label: "Je souhaite exercer mon droit d’accès, de rectification et d’opposition"
+      id: droit-acces
+      link:
+        form:
+          title: Contactez-nous
+          recipient: contact@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
@@ -285,6 +309,12 @@ choices:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: certification@data.gouv.fr
+    - label: "Je souhaite exercer mon droit d’accès, de rectification et d’opposition"
+      id: droit-acces
+      link:
+        form:
+          title: Contactez-nous
+          recipient: contact@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
@@ -339,6 +369,12 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Je souhaite exercer mon droit d’accès, de rectification et d’opposition"
+      id: droit-acces
+      link:
+        form:
+          title: Contactez-nous
+          recipient: contact@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
@@ -397,6 +433,12 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Je souhaite exercer mon droit d’accès, de rectification et d’opposition"
+      id: droit-acces
+      link:
+        form:
+          title: Contactez-nous
+          recipient: contact@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
@@ -455,6 +497,12 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Je souhaite exercer mon droit d’accès, de rectification et d’opposition"
+      id: droit-acces
+      link:
+        form:
+          title: Contactez-nous
+          recipient: contact@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
