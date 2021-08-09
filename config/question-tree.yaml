@@ -225,7 +225,7 @@ choices:
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
-          recipient: certification@data.gouv.fr
+          recipient: ouverture@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
@@ -314,7 +314,7 @@ choices:
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
-          recipient: certification@data.gouv.fr
+          recipient: ouverture@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
