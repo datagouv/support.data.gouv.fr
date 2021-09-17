@@ -24,7 +24,7 @@ The `id` must be URL-friendly, it consists of one or many lowecase words separat
 
 A new question follows the same structure as the top-level question.
 
-An answer can be of three types :
+An answer can be of three types:
 
 - a `path` attribute, which must be a relative path to a markdown file containing the content to display
 - a `content` attribute, which is the raw html displayed content
