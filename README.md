@@ -1,4 +1,22 @@
-[data.gouv.fr](https://data.gouv.fr) support application.
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/60264344/134811323-0ab7db31-c29b-46b2-9c41-a61e8ef8ffff.png">  
+</p>
+<p align="center">
+    <i>💁‍♂️  [data.gouv.fr](https://data.gouv.fr) support application 💁‍♂️</i>
+    <br>
+    <br>
+    <img src="https://img.shields.io/github/issues/etalab/support.data.gouv.fr">
+    <img src="https://img.shields.io/github/issues-closed/etalab/support.data.gouv.fr">
+    <img src="https://img.shields.io/github/contributors/etalab/support.data.gouv.fr">
+    <img src="https://img.shields.io/github/license/etalab/support.data.gouv.fr">
+</p>
+
+- [Installation](#installation)
+- [Development](#development)
+- [Configuration](#configuration)
+- [Tests](#tests)
+- [Architecture decision records](#architecture-decision-records)
+- [Inspirations](#inspirations)
 
 # Installation
 
