@@ -2,7 +2,7 @@
     <img src="https://user-images.githubusercontent.com/60264344/134811323-0ab7db31-c29b-46b2-9c41-a61e8ef8ffff.png">  
 </p>
 <p align="center">
-    <i>💁‍♂️  [data.gouv.fr](https://data.gouv.fr) support application 💁‍♂️</i>
+    <i>💁‍♂️  data.gouv.fr support application 💁‍♂️</i>
     <br>
     <br>
     <img src="https://img.shields.io/github/issues/etalab/support.data.gouv.fr">
