@@ -415,6 +415,14 @@ choices:
       id: procedure-administrative
       link:
         path: answers/demarches_admin.md
+    - label: "Je souhaite retrouver le numéro d'identification RNA d'une association"
+      id: numero-rna
+      link:
+        path: answers/numero_rna.md
+    - label: "Je souhaite obtenir ou retrouver le numéro Siren / Siret d'une association"
+      id: siren-association
+      link:
+        path: answers/siren_association.md
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
       id: jeu-de-donnee
       link:
