@@ -7,4 +7,6 @@ Pour trouver un rendez vous, vous pouvez consulter [sante.fr](https://www.sante.
 
 Pour récupérer votre attestation certifiée de vaccination (pass sanitaire), vous pouvez consulter votre espace [ameli.fr](https://attestation-vaccin.ameli.fr/).
 
+Pour toute question médicale, nous vous invitons à prendre conseil auprès de votre médecin traitant.
+
 <button href="https://www.gouvernement.fr/info-coronavirus/vaccins">Aller sur gouvernement.fr</button>
