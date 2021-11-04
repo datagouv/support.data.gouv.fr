@@ -38,10 +38,6 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "J'ai une question relative au pass sanitaire ou au vaccin contre la COVID-19"
-      id: info-covid
-      link:
-        path: answers/info_covid.md
     - label: "Autre"
       id: autre
       link:
