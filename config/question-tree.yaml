@@ -10,6 +10,10 @@ choices:
       id: procedure-administrative
       link:
         path: answers/demarches_admin.md
+     - label: "Je souhaite obtenir ou retrouver un numéro Siren / Siret"
+      id: siren-particulier
+      link:
+        path: answers/siren_siret.md
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
       id: jeu-de-donnee
       link:
@@ -361,6 +365,10 @@ choices:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
+     - label: "Je souhaite obtenir ou retrouver un numéro Siren / Siret"
+      id: siren-particulier
+      link:
+        path: answers/siren_siret.md
     - label: "Je souhaite signaler une faille de sécurité"
       id: faille-securite
       link:
