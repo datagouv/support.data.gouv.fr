@@ -422,7 +422,7 @@ choices:
     - label: "Je souhaite obtenir ou retrouver le numéro Siren / Siret d'une association"
       id: siren-association
       link:
-        path: answers/siren_association.md
+        path: answers/siren_siret.md
     - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
       id: jeu-de-donnee
       link:
