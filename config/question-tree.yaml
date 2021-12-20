@@ -10,7 +10,7 @@ choices:
       id: procedure-administrative
       link:
         path: answers/demarches_admin.md
-     - label: "Je souhaite obtenir ou retrouver un numéro Siren / Siret"
+    - label: "Je souhaite obtenir ou retrouver un numéro Siren / Siret"
       id: siren-particulier
       link:
         path: answers/siren_siret.md
