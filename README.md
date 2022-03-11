@@ -10,13 +10,13 @@
     <img src="https://img.shields.io/github/contributors/etalab/support.data.gouv.fr">
     <img src="https://img.shields.io/github/license/etalab/support.data.gouv.fr">
 </p>
-
 - [Installation](#installation)
 - [Development](#development)
 - [Configuration](#configuration)
 - [Tests](#tests)
 - [Architecture decision records](#architecture-decision-records)
 - [Inspirations](#inspirations)
+
 
 # Installation
 

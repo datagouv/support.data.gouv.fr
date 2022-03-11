@@ -140,7 +140,7 @@ choices:
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
-          recipient: ouverture@data.gouv.fr
+          recipient: certification@data.gouv.fr
     - label: "Question sur des données géographiques"
       id: geo
       link:
@@ -210,7 +210,7 @@ choices:
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
-          recipient: ouverture@data.gouv.fr
+          recipient: certification@data.gouv.fr
     - label: "Question sur des données géographiques"
       id: geo
       link:
