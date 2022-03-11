@@ -1,13 +1,173 @@
 {% set title = "Support data.gouv.fr" %}
 {% extends 'base.njk' %}
 {% block body %}
-    <h1 class="mb-12">Bonjour 👋, comment pouvons-nous vous aider ?
+    <h1 class="mb-12">Bienvenue sur le support de la plateforme data.gouv.fr. 👋
     </h1>
+
     <p>Avant de nous contacter, nous vous invitons à consulter
         <a href="https://doc.data.gouv.fr/" target="_blank">la documentation technique de data.gouv.fr</a>
         ainsi que
         <a href="https://guides.etalab.gouv.fr/accueil.html" target="_blank">les guides d'Etalab</a>
         , conçus pour vous accompagner dans votre démarche d'open data.</p>
+
+   <div style="display: flex; gap: 15px; margin-bottom: 30px;">
+
+        <div class="fr-card fr-card--horizontal fr-enlarge-link" style="flex: 1;">
+            <div class="fr-card__body">
+
+             <h4 class="fr-card__title">
+                <a href="https://guides.etalab.gouv.fr/" class="fr-card__link">Les guides d’Etalab sur l’open data 📚</a>
+            </h4>
+            <p class="fr-card__desc">Les guides d'Etalab sur l'open data visent à vous accompagner dans votre démarche d’ouverture et d’exploitation des données publiques.</p>
+            <p class="fr-card__detail">Apprendre les bonnes pratiques de l’open data</p>
+            </div>
+        </div>
+
+
+        <div class="fr-card fr-card--horizontal fr-enlarge-link" style="flex: 1;">
+            <div class="fr-card__body">
+
+            <h4 class="fr-card__title">
+                <a href="https://doc.data.gouv.fr/" class="fr-card__link">La documentation de data.gouv.fr ⚙️</a>
+            </h4>
+            <p class="fr-card__desc">Consulter la documentation pour vous aider dans votre parcours d’utilisation de la plateforme, savoir comment moissoner votre plateforme ou encore utiliser l'API.</p>
+            <p class="fr-card__detail">Savoir comment utiliser la plateforme data.gouv.fr</p>
+            </div>
+        </div>
+    </div>
+
+<h4> Vous avez une question sur une procédure administrative ? </h4>
+<p>Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets.
+Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+
+<h4> Vous avez une question sur un jeu de données en particulier ? </h4>
+<p>Si vous avez constaté une erreur sur un jeu de donnée ou si vous avez une question relative à celui-ci, vous pouvez vous adresser directement au producteur des données dans
+l'espace de discussion dédié. Celui-ci se situe en bas de page de chaque jeux de donnée.
+En effet, l'équipe de data.gouv.fr n'est pas en charge de la production et de la diffusion des données publiées sur la plateforme. 
+Ce sont les producteurs des données qui sont à même de répondre. <a href="https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees/#discussion-604e44bcf9fac775bbc0aeca" target="_blank"> Voir un exemple </a> </p>
+
+<ul class="fr-accordions-group">
+   <li>
+       <section class="fr-accordion">
+           <h3 class="fr-accordion__title">
+               <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-1">Vous avez une question sur la base SIRENE ?</button>
+           </h3>
+           <div class="fr-collapse" id="accordion-1">
+               <br/>
+               <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+
+           </div>
+       </section>
+   </li>
+   <li>
+       <section class="fr-accordion">
+           <h3 class="fr-accordion__title">
+               <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-2">Vous avez une question sur le Répertoire National des Associations (RNA) ?</button>
+           </h3>
+           <div class="fr-collapse" id="accordion-2">
+               <br/>
+               <p>Si vous avez constaté une erreur sur un jeu de donnée ou si vous avez une question relative à celui-ci, vous pouvez <strong>vous adresser directement au producteur des données dans l'espace de discussion dédié</strong>.
+                Celui-ci se situe en bas de page de chaque jeux de donnée. En effet, l'équipe de data.gouv.fr n'est pas en charge de la production et de la diffusion des données publiées sur la plateforme. Ce sont les producteurs des données qui sont à même de répondre.
+                <a href="https://www.data.gouv.fr/fr/datasets/fichier-des-personnes-decedees/#discussion-604e44bcf9fac775bbc0aeca" target="_blank">Voir un exemple</a></p>
+           </div>
+       </section>
+   </li>
+   <li>
+       <section class="fr-accordion">
+           <h3 class="fr-accordion__title">
+               <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-3">Vous avez une question sur le fichier des personnes décédées ?</button>
+           </h3>
+           <div class="fr-collapse" id="accordion-3">
+               <br/>
+               <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+               <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+                </ul>
+                <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+           </div>
+       </section>
+   </li>
+       <section class="fr-accordion">
+           <h3 class="fr-accordion__title">
+               <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-4">Vous avez une question sur la base de demandes de valeurs foncières (DVF) ?</button>
+           </h3>
+           <div class="fr-collapse" id="accordion-4">
+               <br/>
+               <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+               <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+                </ul>
+                <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+           </div>
+       </section>
+   </li>
+       <section class="fr-accordion">
+           <h3 class="fr-accordion__title">
+               <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-5">Vous avez une question sur la base adresse nationale ?</button>
+           </h3>
+           <div class="fr-collapse" id="accordion-5">
+               <br/>
+               <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+               <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+                </ul>
+                <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+           </div>
+       </section>
+   </li>
+       <section class="fr-accordion">
+           <h3 class="fr-accordion__title">
+               <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-6">Vous avez une question sur l’API découpage administrative ? </button>
+           </h3>
+           <div class="fr-collapse" id="accordion-6">
+               <br/>
+               <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+               <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+                </ul>
+                <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+           </div>
+       </section>
+   </li>
+       <section class="fr-accordion">
+           <h3 class="fr-accordion__title">
+               <button class="fr-accordion__btn" aria-expanded="false" aria-controls="accordion-7">Vous avez une question sur des données relatives au COVID-19 ?</button>
+           </h3>
+           <div class="fr-collapse" id="accordion-7">
+               <br/>
+               <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+               <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+                </ul>
+                <p> Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
+                Vous pouvez vous référer au site <a href="https://doc.data.gouv.fr/" target="_blank"> Service-Public.fr </a> le cas échéant.</p>
+           </div>
+       </section>
+   </li>
+</ul>
+<br/>
+
+<h4> Vous n’avez pas trouvé la réponse à votre question ? Contactez-nous ! </h4>
     <p>Pour commencer, nous aimerions faire connaissance :</p>
     <turbo-frame id="support-tree">
         {% for level in supportFlow.levels %}
@@ -20,4 +180,33 @@
             {% endif %}
         </div>
     </turbo-frame>
+
+
+
+<div class="fr-card fr-card--horizontal fr-enlarge-link">
+    <div class="fr-card__body">
+
+       <h4 class="fr-card__title">
+           <a href="https://guides.etalab.gouv.fr/" class="fr-card__link">Les guides d’Etalab sur l’open data 📚</a>
+       </h4>
+       <p class="fr-card__desc">Les guides d'Etalab sur l'open data visent à vous accompagner dans votre démarche d’ouverture et d’exploitation des données publiques.</p>
+       <p class="fr-card__detail">Apprendre les bonnes pratiques de l’open data</p>
+    </div>
+</div>
+
+<div class="fr-card fr-card--horizontal fr-enlarge-link">
+    <div class="fr-card__body">
+
+       <h4 class="fr-card__title">
+           <a href="https://doc.data.gouv.fr/" class="fr-card__link">La documentation de data.gouv.fr ⚙️</a>
+       </h4>
+       <p class="fr-card__desc">Consulter la documentation pour vous aider dans votre parcours d’utilisation de la plateforme, savoir comment moissoner votre plateforme ou encore utiliser l'API.</p>
+       <p class="fr-card__detail">Savoir comment utiliser la plateforme data.gouv.fr</p>
+    </div>
+</div>
+<br/>
+
+
+
 {% endblock %}
+
