@@ -1,179 +1,118 @@
 ---
 title: Qui êtes-vous ?
 choices:
-- label: Un particulier
+- label: Particulier
   id: particulier
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
-    - label: "J'ai une question sur une procédure administrative"
-      id: procedure-administrative
-      link:
-        path: answers/demarches_admin.md
-    - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
-      id: jeu-de-donnee
-      link:
-        path: answers/question_donnees.md
-    - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+    - label: "Problème technique dans l'utilisation de data.gouv.fr"
       id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
-    - label: "Je souhaite signaler une faille de sécurité"
+    - label: "Signaler une faille de sécurité"
       id: faille-securite
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "Je souhaite faire un retour sur la plateforme"
+    - label: "Faire un retour sur la plateforme"
       id: retour-plateforme
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+    - label: "Demande relative à l'ouverture des données publiques"
       id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Question sur des données géographiques"
+      id: geo
+      link:
+        form:
+          title: Contactez-nous
+          recipient: geo@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    #- label: "J'ai une question relative à des données à caractère personnel"
-      #link:
-        #title: 'Votre question concerne :'
-        #choices:
-        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          #link:
-            #content: La réponse est non
-        #- label: Le Repertoire national des associations (RNA)
-          #link:
-            #content: La réponse est toujours non 
-        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          #link:
-            #content: "Puisqu'on vous dit que c'est non"
-        #- label: Le fichier des personnes décédées
-          #link:
-            #content: Bon très bien, les réponses à ces questions sont
-        #- label: Autre
-          #link:
-            #form:
-              #title: Contactez-nous
-              #recipient: ouverture@data.gouv.fr
-- label: Une ou un journaliste
-  id: journaliste
-  link:
-    title: Comment pouvons-nous vous aider ?
-    choices:
-    - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
-      id: jeu-de-donnee
-      link:
-        path: answers/question_donnees.md
-    - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
-      id: probleme-technique
-      link:
-        form:
-          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
-          recipient: support@data.gouv.fr
-    - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-securite
-      link:
-        form:
-          title: Contactez-nous
-          recipient: support@data.gouv.fr
-    - label: "Je souhaite faire un retour sur la plateforme"
-      id: retour-plateforme
-      link:
-        form:
-          title: Contactez-nous
-          recipient: support@data.gouv.fr
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
-      id: ouverture-donnees-publiques
-      link:
-        form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
-          recipient: ouverture@data.gouv.fr
-    - label: "Autre"
-      id: autre
-      link:
-        form:
-          title: Contactez-nous
-          recipient: support@data.gouv.fr
-- label: Une chercheuse ou un chercheur 
+- label: Chercheur ou journaliste 
   id: chercheur
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
-    - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
-      id: jeu-de-donnee
-      link:
-        path: answers/question_donnees.md
-    - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+    - label: "Problème technique dans l'utilisation de data.gouv.fr"
       id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
-    - label: "Je souhaite signaler une faille de sécurité"
+    - label: "Signaler une faille de sécurité"
       id: faille-securite
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "Je souhaite faire un retour sur la plateforme"
+    - label: "Faire un retour sur la plateforme"
       id: retour-plateforme
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+    - label: "Demande relative à l'ouverture des données publiques"
       id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Question sur des données géographiques"
+      id: geo
+      link:
+        form:
+          title: Contactez-nous
+          recipient: geo@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    #- label: "J'ai une question relative à des données à caractère personnel"
-      #link:
-        #title: 'Votre question concerne :'
-        #choices:
-        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          #link:
-            #content: La réponse est non
-        #- label: Le Repertoire national des associations (RNA)
-          #link:
-            #content: La réponse est toujours non 
-        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          #link:
-            #content: "Puisqu'on vous dit que c'est non"
-        #- label: Le fichier des personnes décédées
-          #link:
-            #content: Bon très bien, les réponses à ces questions sont
-        #- label: Autre
-          #link:
-            #form:
-              #title: Contactez-nous
-              #recipient: ouverture@data.gouv.fr
-- label: Une administration centrale
+- label: Administration centrale
   id: administration-centrale
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
-    - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
-      id: jeu-de-donnee
+    - label: "Problème technique dans l'utilisation de data.gouv.fr"
+      id: probleme-technique
       link:
-        path: answers/question_donnees.md
-    - label: "Je souhaite référencer mes données sur data.gouv.fr"
+        form:
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
+          recipient: support@data.gouv.fr
+    - label: "Signaler une faille de sécurité"
+      id: faille-securite
+      link:
+        form:
+          title: Contactez-nous
+          recipient: support@data.gouv.fr
+    - label: "Faire un retour sur la plateforme"
+      id: retour-plateforme
+      link:
+        form:
+          title: Contactez-nous
+          recipient: support@data.gouv.fr
+    - label: "Demande relative à l'ouverture des données publiques"
+      id: ouverture-donnees-publiques
+      link:
+        form:
+          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
+          recipient: ouverture@data.gouv.fr
+    - label: "Référencer mes données sur data.gouv.fr"
       id: referencement
       link:
         title: 'Où sont situées vos données ?'
@@ -190,103 +129,60 @@ choices:
             form:
               title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
               recipient: ouverture@data.gouv.fr
-    - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
-      id: probleme-technique
-      link:
-        form:
-          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
-          recipient: support@data.gouv.fr
-    - label: "Je souhaite signaler une faille de sécurité"
-      id: faille-securite
-      link:
-        form:
-          title: Contactez-nous
-          recipient: support@data.gouv.fr
-    - label: "Je souhaite faire un retour sur la plateforme"
-      id: retour-plateforme
-      link:
-        form:
-          title: Contactez-nous
-          recipient: support@data.gouv.fr
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
-      id: ouverture-donnees-publiques
-      link:
-        form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
-          recipient: ouverture@data.gouv.fr
-    - label: "Je souhaite faire une demande d'homologation de licence"
+    - label: "Faire une demande d'homologation de licence"
       id: licence
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: homologation.licence@data.gouv.fr
-    - label: "Je souhaite faire certifier mon organisation sur data.gouv.fr"
+    - label: "Faire certifier mon organisation sur data.gouv.fr"
       id: certification
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: ouverture@data.gouv.fr
+    - label: "Question sur des données géographiques"
+      id: geo
+      link:
+        form:
+          title: Contactez-nous
+          recipient: geo@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    #- label: "J'ai une question relative à des données à caractère personnel"
-      #link:
-        #title: 'Votre question concerne :'
-        #choices:
-        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          #link:
-            #content: La réponse est non
-        #- label: Le Repertoire national des associations (RNA)
-          #link:
-            #content: La réponse est toujours non 
-        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          #link:
-            #content: "Puisqu'on vous dit que c'est non"
-        #- label: Le fichier des personnes décédées
-          #link:
-            #content: Bon très bien, les réponses à ces questions sont
-        #- label: Autre
-          #link:
-            #form:
-              #title: Contactez-nous
-              #recipient: ouverture@data.gouv.fr
-- label: Une collectivité territoriale
+- label: Collectivité territoriale
   id: collectivite-territoriale
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
-    - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
-      id: jeu-de-donnee
-      link:
-        path: answers/question_donnees.md
-    - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+    - label: "Problème technique dans l'utilisation de data.gouv.fr"
       id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
-    - label: "Je souhaite signaler une faille de sécurité"
+    - label: "Signaler une faille de sécurité"
       id: faille-securite
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "Je souhaite faire un retour sur la plateforme"
+    - label: "Faire un retour sur la plateforme"
       id: retour-plateforme
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+    - label: "Demande relative à l'ouverture des données publiques"
       id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
-    - label: "Je souhaite référencer mes données sur data.gouv.fr"
+    - label: "Référencer mes données sur data.gouv.fr"
       id: referencement
       link:
         title: 'Où sont situées vos données ?'
@@ -303,230 +199,150 @@ choices:
             form:
               title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
               recipient: ouverture@data.gouv.fr
-    - label: "Je souhaite faire une demande d'homologation de licence"
+    - label: "Faire une demande d'homologation de licence"
       id: licence
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: homologation.licence@data.gouv.fr
-    - label: "Je souhaite faire certifier mon organisation sur data.gouv.fr"
+    - label: "Faire certifier mon organisation sur data.gouv.fr"
       id: certification
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: ouverture@data.gouv.fr
+    - label: "Question sur des données géographiques"
+      id: geo
+      link:
+        form:
+          title: Contactez-nous
+          recipient: geo@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    #- label: "J'ai une question relative à des données à caractère personnel"
-      #link:
-        #title: 'Votre question concerne :'
-        #choices:
-        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          #link:
-            #content: La réponse est non
-        #- label: Le Repertoire national des associations (RNA)
-          #link:
-            #content: La réponse est toujours non 
-        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          #link:
-            #content: "Puisqu'on vous dit que c'est non"
-        #- label: Le fichier des personnes décédées
-          #link:
-            #content: Bon très bien, les réponses à ces questions sont
-        #- label: Autre
-          #link:
-            #form:
-              #title: Contactez-nous
-              #recipient: ouverture@data.gouv.fr
-- label: Une entreprise
+- label: Entreprise
   id: entreprise
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
-    - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
-      id: jeu-de-donnee
-      link:
-        path: answers/question_donnees.md
-    - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+    - label: "Problème technique dans l'utilisation de data.gouv.fr"
       id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
-    - label: "Je souhaite signaler une faille de sécurité"
+    - label: "Signaler une faille de sécurité"
       id: faille-securite
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "Je souhaite faire un retour sur la plateforme"
+    - label: "Faire un retour sur la plateforme"
       id: retour-plateforme
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+    - label: "Demande relative à l'ouverture des données publiques"
       id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Question sur des données géographiques"
+      id: geo
+      link:
+        form:
+          title: Contactez-nous
+          recipient: geo@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    #- label: "J'ai une question relative à des données à caractère personnel"
-      #link:
-        #title: 'Votre question concerne :'
-        #choices:
-        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          #link:
-            #content: La réponse est non
-        #- label: Le Repertoire national des associations (RNA)
-          #link:
-            #content: La réponse est toujours non 
-        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          #link:
-            #content: "Puisqu'on vous dit que c'est non"
-        #- label: Le fichier des personnes décédées
-          #link:
-            #content: Bon très bien, les réponses à ces questions sont
-        #- label: Autre
-          #link:
-            #form:
-              #title: Contactez-nous
-              #recipient: ouverture@data.gouv.fr
-- label: Une association
+- label: Association
   id: association
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
-    - label: "J'ai une question sur une procédure administrative"
-      id: procedure-administrative
-      link:
-        path: answers/demarches_admin.md
-    - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
-      id: jeu-de-donnee
-      link:
-        path: answers/question_donnees.md
-    - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+    - label: "Problème technique dans l'utilisation de data.gouv.fr"
       id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
-    - label: "Je souhaite signaler une faille de sécurité"
+    - label: "Signaler une faille de sécurité"
       id: faille-securite
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "Je souhaite faire un retour sur la plateforme"
+    - label: "Faire un retour sur la plateforme"
       id: retour-plateforme
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+    - label: "Demande relative à l'ouverture des données publiques"
       id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Question sur des données géographiques"
+      id: geo
+      link:
+        form:
+          title: Contactez-nous
+          recipient: geo@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    #- label: "J'ai une question relative à des données à caractère personnel"
-      #link:
-        #title: 'Votre question concerne :'
-        #choices:
-        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          #link:
-            #content: La réponse est non
-        #- label: Le Repertoire national des associations (RNA)
-          #link:
-            #content: La réponse est toujours non 
-        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          #link:
-            #content: "Puisqu'on vous dit que c'est non"
-        #- label: Le fichier des personnes décédées
-          #link:
-            #content: Bon très bien, les réponses à ces questions sont
-        #- label: Autre
-          #link:
-            #form:
-              #title: Contactez-nous
-              #recipient: ouverture@data.gouv.fr
 - label: Autre
   id: autre
   link:
     title: Comment pouvons-nous vous aider ?
     choices:
-    - label: "J'ai une question sur une procédure administrative"
-      id: procedure-administrative
-      link:
-        path: answers/demarches_admin.md
-    - label: "J'ai constaté une erreur ou j'ai une question relative à un jeu de donnée publié sur data.gouv.fr"
-      id: jeu-de-donnee
-      link:
-        path: answers/question_donnees.md
-    - label: "J'ai un problème technique dans l'utilisation de la plateforme data.gouv.fr"
+    - label: "Problème technique dans l'utilisation de data.gouv.fr"
       id: probleme-technique
       link:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: support@data.gouv.fr
-    - label: "Je souhaite signaler une faille de sécurité"
+    - label: "Signaler une faille de sécurité"
       id: faille-securite
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "Je souhaite faire un retour sur la plateforme"
+    - label: "Faire un retour sur la plateforme"
       id: retour-plateforme
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
+    - label: "Demande relative à l'ouverture des données publiques"
       id: ouverture-donnees-publiques
       link:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Question sur des données géographiques"
+      id: geo
+      link:
+        form:
+          title: Contactez-nous
+          recipient: geo@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    #- label: "J'ai une question relative à des données à caractère personnel"
-      #link:
-        #title: 'Votre question concerne :'
-        #choices:
-        #- label: La base de données des demandes de valeurs foncières (transactions immobilières)
-          #link:
-            #content: La réponse est non
-        #- label: Le Repertoire national des associations (RNA)
-          #link:
-            #content: La réponse est toujours non 
-        #- label: La base Sirene des entreprises et de leurs établissements (SIREN, SIRET)
-          #link:
-            #content: "Puisqu'on vous dit que c'est non"
-        #- label: Le fichier des personnes décédées
-          #link:
-            #content: Bon très bien, les réponses à ces questions sont
-        #- label: Autre
-          #link:
-            #form:
-              #title: Contactez-nous
-              #recipient: ouverture@data.gouv.fr
