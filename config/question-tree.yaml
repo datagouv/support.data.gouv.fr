@@ -106,14 +106,6 @@ choices:
         form:
           title: Contactez-nous
           recipient: support@data.gouv.fr
-    - label: "J'ai une demande relative à l'ouverture des données publiques : données absentes ou difficiles à trouver"
-      id: ouverture-donnees-publiques
-      link:
-        form:
-          title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
-          recipient: ouverture@data.gouv.fr
-    - label: "Autre"
-      id: autre
     - label: "Faire un retour sur la plateforme"
       id: retour-plateforme
       link:
