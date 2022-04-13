@@ -35,7 +35,7 @@ choices:
       link:
         form:
           title: Contactez-nous
-          recipient: contact@data.gouv.fr
+          recipient: support@data.gouv.fr
     - label: "Question sur des données géographiques"
       id: geo
       link:
