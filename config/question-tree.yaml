@@ -30,6 +30,12 @@ choices:
         form:
           title: Contactez-nous (cette demande d'information n'est pas assimilable à une saisie CADA)
           recipient: ouverture@data.gouv.fr
+    - label: "Je souhaite exercer mon droit d’accès, de rectification et d’opposition"
+      id: droit-acces
+      link:
+        form:
+          title: Contactez-nous
+          recipient: support@data.gouv.fr
     - label: "Question sur des données géographiques"
       id: geo
       link:
