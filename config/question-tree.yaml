@@ -202,6 +202,12 @@ choices:
         form:
           title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
           recipient: certification@data.gouv.fr
+    - label: "J'ai une question relative à catalogue.data.gouv.fr"
+      id: catalogue
+      link:
+        form:
+          title: Contactez-nous (nous vous invitons à consulter la documentation au préalable)
+          recipient: catalogue@data.gouv.fr
     - label: "Autre"
       id: autre
       link:
