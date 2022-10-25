@@ -16,7 +16,7 @@ In order to change the displayed question tree, one might change the `config/que
 
 This file is written in [YAML](https://fr.wikipedia.org/wiki/YAML#:~:text=YAML%2C%20acronyme%20de%20Yet%20Another,de%20donn%C3%A9es%20par%20s%C3%A9rialisation%20Unicode.).
 
-It starts with a top-level question, consisting in a `title`, and `choices` on which the user can click.
+It starts with a top-level question, consisting of a `title`, and `choices` on which the user can click.
 
 Each item of the `choices` attribute consists in a `label` displayed on the webpage, a `link` which can be a new question or an answer, and an `id` used to identify the choice.
 
