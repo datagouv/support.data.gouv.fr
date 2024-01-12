@@ -1,5 +1,5 @@
-Depuis 2009, toutes les associations créées ou ayant déclaré un changement de situation disposent d'un numéro RNA. Le répertoire national des associations (RNA) est téléchargeable [sur data.gouv.fr](https://www.data.gouv.fr/fr/datasets/repertoire-national-des-associations/).
+Si vous êtes une association et recherchez votre numéro RNA, vous pouvez consulter le moteur de recherche des associations du journal officiel (dont nous ne sommes pas responsables). 
 
-Vous pouvez également rechercher le numéro RNA sur le site [journal-officiel.gouv.fr](https://www.journal-officiel.gouv.fr/associations/recherche/)
+Pour plus d'informations, vous pouvez [consulter le site Service-Public.fr](https://www.service-public.fr/particuliers/vosdroits/N31931).
 
-<button href="https://www.journal-officiel.gouv.fr/associations/recherche/">journal-officiel.gouv.fr</button>
+<button href="https://www.journal-officiel.gouv.fr/pages/associations-recherche/?sort=cronosort&disjunctive.source">Chercher votre numéro RNA</button>
