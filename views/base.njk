@@ -5,8 +5,17 @@
     </head>
     <body class="flex flex-col h-screen">
         {% include 'includes/header.njk' %}
-        <div class="md:max-w-screen-lg mx-auto mt-16 flex-1"> {% block body %}{% endblock %}
-            </div>
+<div class="fr-container mt-16 mb-16">
+  <div class="fr-grid-row fr-grid-row--gutters">
+    <div class="fr-col"></div>
+    <div class="fr-col-4"></div>
+    <div class="fr-col-12 fr-col-lg-4"></div>
+    {% block body %}{% endblock %} 
+  </div>
+</div>
             {% include 'includes/footer.njk' %}
         </body>
     </html>
+
+
+    

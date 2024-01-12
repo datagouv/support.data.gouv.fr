@@ -23,6 +23,7 @@
 - `cp .env.dist .env`
 - Adjust the `.env` file with development settings
 - `npm install`
+- You have to use node v14 (nvm install 14 && npm use 14)
 
 # Development
 

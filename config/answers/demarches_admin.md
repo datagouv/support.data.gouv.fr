@@ -1,3 +1,4 @@
-Le site data.gouv.fr ne permet pas aux particuliers de remplir des formalités administratives et notre support n'est pas en mesure de vous aider sur ces sujets. 
-Vous pouvez vous référer au site [Service-Public.fr](https://www.service-public.fr/) le cas échéant.
+**Référerez-vous au site Service-Public.fr, le site officiel d’information et de démarches administratives.**
+
+L'équipe de data.gouv.fr n'est pas à même de répondre à ces questions.
 <button href="http://service-public.fr/">Aller sur service-public.fr</button>
