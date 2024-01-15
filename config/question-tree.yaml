@@ -11,7 +11,7 @@ choices:
       link:
         title: Sur quelles données avez vous des questions ?
         choices:
-          - label: "RNA"
+          - label: "Associations (RNA)"
             id: rna
             link:
               path : answers/numero_rna.md
@@ -27,7 +27,7 @@ choices:
             id: siret
             link:
               path : answers/siret.md
-          - label: "DVF"
+          - label: "Immobilier (DVF)"
             id: dvf
             link:
               path : answers/dvf.md
@@ -43,6 +43,12 @@ choices:
             id: irve
             link:
               path : answers/irve.md
+          - label: "Données géographiques"
+            id: geo
+            link:
+              form:
+                title: Que souhaitez-vous nous dire ?
+                recipient: geo@data.gouv.fr
           - label: "Autre"
             id: other
             link:
@@ -54,21 +60,32 @@ choices:
     - label: "L'utilisation de data.gouv.fr"
       id: datagouv
       link:
-        form:
-          title: Nous vous invitons à consulter nos guides avant de nous écrire
-          recipient: support@data.gouv.fr
-    - label: "L'ouverture des données"
-      id: open
-      link:
-        form:
-          title: De quelles données revez-vous ?
-          recipient: support@data.gouv.fr
-- label: 💡 Demande de fonctionnalité
+        title : Comment pouvons-nous vous aider ?
+        choices : 
+          - label: "Faire certifier son organisation"
+            id: certification
+            link:
+              form:
+                title: Pensez à nous envoyer un lien vers votre organisation ?
+                recipient: certification@data.gouv.fr
+          - label: "Référencer ou moissonner ses données sur data.gouv.fr"
+            id: moissonnage
+            link:
+              form:
+                title: Que souhaitez-vous nous dire ?
+                recipient: moissonage@data.gouv.fr
+          - label: "Autre"
+            id: autre
+            link:
+              form:
+                title: Que souhaitez-vous nous dire ?
+                recipient: support@data.gouv.fr
+- label: 💡 Demande d'ouverture de données
   id: feature
   link:
     form:
-      title: De quelle fonctionnalité revez-vous ?
-      recipient: support@data.gouv.fr
+      title: De quelles données revez-vous ?
+      recipient: ouverture@data.gouv.fr
 - label: 🐛 Soumettre un bug 
   id: bug
   link:
