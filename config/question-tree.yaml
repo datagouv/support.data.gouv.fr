@@ -73,7 +73,7 @@ choices:
             link:
               form:
                 title: Que souhaitez-vous nous dire ?
-                recipient: moissonage@data.gouv.fr
+                recipient: moissonnage@data.gouv.fr
           - label: "Autre"
             id: autre
             link:
