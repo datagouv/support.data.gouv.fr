@@ -22,13 +22,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/etalab/support.data.gouv.fr.git"
+    "url": "git+https://github.com/datagouv/support.data.gouv.fr.git"
   },
   "license": "AGPLv3",
   "bugs": {
-    "url": "https://github.com/etalab/support.data.gouv.fr/issues"
+    "url": "https://github.com/datagouv/support.data.gouv.fr/issues"
   },
-  "homepage": "https://github.com/etalab/support.data.gouv.fr#readme",
+  "homepage": "https://github.com/datagouv/support.data.gouv.fr#readme",
   "devDependencies": {
     "@types/express": "^4.17.11",
     "@types/extra-watch-webpack-plugin": "^1.0.2",
