@@ -5,10 +5,10 @@
     <i>💁‍♂️  [data.gouv.fr](https://data.gouv.fr) support application 💁‍♂️</i>
     <br>
     <br>
-    <img src="https://img.shields.io/github/issues/etalab/support.data.gouv.fr">
-    <img src="https://img.shields.io/github/issues-closed/etalab/support.data.gouv.fr">
-    <img src="https://img.shields.io/github/contributors/etalab/support.data.gouv.fr">
-    <img src="https://img.shields.io/github/license/etalab/support.data.gouv.fr">
+    <img src="https://img.shields.io/github/issues/datagouv/support.data.gouv.fr">
+    <img src="https://img.shields.io/github/issues-closed/datagouv/support.data.gouv.fr">
+    <img src="https://img.shields.io/github/contributors/datagouv/support.data.gouv.fr">
+    <img src="https://img.shields.io/github/license/datagouv/support.data.gouv.fr">
 </p>
 - [Installation](#installation)
 - [Development](#development)
