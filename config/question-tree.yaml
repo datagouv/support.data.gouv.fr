@@ -53,7 +53,7 @@ choices:
             id: other
             link:
               path : answers/question_donnees.md
-    - label: "Un procédure administrative"
+    - label: "Une procédure administrative"
       id: admin
       link:
         path : answers/demarches_admin.md
@@ -81,11 +81,9 @@ choices:
                 title: Que souhaitez-vous nous dire ?
                 recipient: support@data.gouv.fr
 - label: 💡 Demande d'ouverture de données
-  id: feature
+  id: opendata
   link:
-    form:
-      title: De quelles données revez-vous ?
-      recipient: ouverture@data.gouv.fr
+    path: answers/opendata.md
 - label: 🐛 Soumettre un bug 
   id: bug
   link:
