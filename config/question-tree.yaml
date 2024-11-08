@@ -105,10 +105,10 @@ choices:
               form:
                 title: Que souhaitez-vous nous dire ?
                 recipient: support@data.gouv.fr
-- label: 💡 Demande d'ouverture de données
-  id: opendata
+- label: 💡 Demande de données
+  id: demande_donnees
   link:
-    path: answers/opendata.md
+    path: answers/demande_donnees.md
 - label: 🐛 Soumettre un bug 
   id: bug
   link:
