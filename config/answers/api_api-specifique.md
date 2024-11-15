@@ -1,4 +1,4 @@
-Data.gouv est un catalogue de référencement des données et des API, nous ne sommes malheureusement pas en mesure de répondre aux questions concernant l'API ou la donnée elle-même.
+Data.gouv.fr est un catalogue de référencement des données et des API, nous ne sommes malheureusement pas en mesure de répondre aux questions concernant l'API ou la donnée elle-même.
 
 **Pour en savoir plus sur l'API ou la donnée qu'elle distribue :**
 - Nous vous invitons à consulter la documentation de l'API depuis sa page sur [data.gouv.fr/dataservice](https://www.data.gouv.fr/dataservices/) ;

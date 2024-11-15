@@ -58,7 +58,7 @@ choices:
       link:
         title: Comment pouvons-nous vous aider ?
         choices:
-          - label: "Demande d'information sur une API en particulier"
+          - label: "Demande d'information sur une API spécifique"
             id: api_api-specifique
             link:
               path : answers/api_api-specifique.md
