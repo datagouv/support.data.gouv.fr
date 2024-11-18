@@ -53,6 +53,31 @@ choices:
             id: other
             link:
               path : answers/question_donnees.md
+    - label: "Une API"
+      id: api
+      link:
+        title: Comment pouvons-nous vous aider ?
+        choices:
+          - label: "Demande d'information sur une API spécifique"
+            id: apispecifique
+            link:
+              path : answers/api_api-specifique.md
+          - label: "API non-référencée dans le catalogue"
+            id: apinonreferencee
+            link:
+              path : answers/api_recherche-api-non-referencee.md
+          - label: "Référencer une API"
+            id: referencerapi
+            link:
+              path : answers/api_referencer-api.md
+          - label: "API en accès restreint"
+            id: apiaccesrestreint
+            link:
+              path : answers/api_api-acces-restreint.md
+          - label: "Autre"
+            id: apiother
+            link:
+              path : answers/api_other.md
     - label: "Une procédure administrative"
       id: admin
       link:
