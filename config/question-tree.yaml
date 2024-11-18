@@ -53,6 +53,31 @@ choices:
             id: other
             link:
               path : answers/question_donnees.md
+    - label: "Une API"
+      id: api
+      link:
+        title: Comment pouvons-nous vous aider ?
+        choices:
+          - label: "Demande d'information sur une API spécifique"
+            id: api_api-specifique
+            link:
+              path : answers/api_api-specifique.md
+          - label: "API non-référencée dans le catalogue"
+            id: api_recherche-api-non-referencee
+            link:
+              path : answers/api_recherche-api-non-referencee.md
+          - label: "Référencer une API"
+            id: api_referencer-api
+            link:
+              path : answers/api_referencer-api.md
+          - label: "API en accès restreint"
+            id: api_api-acces-restreint
+            link:
+              path : answers/api_api-acces-restreint.md
+          - label: "Autre"
+            id: api_other
+            link:
+              path : answers/api_other.md
     - label: "Une procédure administrative"
       id: admin
       link:
@@ -80,10 +105,10 @@ choices:
               form:
                 title: Que souhaitez-vous nous dire ?
                 recipient: support@data.gouv.fr
-- label: 💡 Demande d'ouverture de données
-  id: opendata
+- label: 💡 Demande de données
+  id: demande_donnees
   link:
-    path: answers/opendata.md
+    path: answers/demande_donnees.md
 - label: 🐛 Soumettre un bug 
   id: bug
   link:
